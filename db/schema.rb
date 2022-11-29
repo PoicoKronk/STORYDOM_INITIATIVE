@@ -10,9 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_150646) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_29_111446) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.string "typ"
+    t.string "gender"
+    t.boolean "good"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.string "typ"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.string "typ"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stories", force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "place_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_stories_on_character_id"
+    t.index ["item_id"], name: "index_stories_on_item_id"
+    t.index ["place_id"], name: "index_stories_on_place_id"
+    t.index ["user_id"], name: "index_stories_on_user_id"
+  end
+
+  create_table "story_structures", force: :cascade do |t|
+    t.bigint "story_id", null: false
+    t.bigint "structures_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["story_id"], name: "index_story_structures_on_story_id"
+    t.index ["structures_id"], name: "index_story_structures_on_structures_id"
+  end
+
+  create_table "structures", force: :cascade do |t|
+    t.text "content"
+    t.integer "page_number"
+    t.string "char_type"
+    t.string "place_type"
+    t.string "item_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +81,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_150646) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "stories", "characters"
+  add_foreign_key "stories", "items"
+  add_foreign_key "stories", "places"
+  add_foreign_key "stories", "users"
+  add_foreign_key "story_structures", "stories"
+  add_foreign_key "story_structures", "structures", column: "structures_id"
 end
