@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_30_100303) do
+
+ActiveRecord::Schema[7.0].define(version: 2022_11_30_114323) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,9 +62,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_100303) do
   end
 
   create_table "structures", force: :cascade do |t|
-    t.string "char_type"
-    t.string "place_type"
-    t.string "item_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "initial_sit"
@@ -71,6 +70,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_100303) do
     t.text "adventure2"
     t.text "outcome"
     t.text "final_sit"
+    t.bigint "place_id", null: false
+    t.bigint "item_id", null: false
+    t.bigint "character_id", null: false
+    t.index ["character_id"], name: "index_structures_on_character_id"
+    t.index ["item_id"], name: "index_structures_on_item_id"
+    t.index ["place_id"], name: "index_structures_on_place_id"
+
   end
 
   create_table "users", force: :cascade do |t|
@@ -91,4 +97,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_100303) do
   add_foreign_key "stories", "users"
   add_foreign_key "story_structures", "stories"
   add_foreign_key "story_structures", "structures", column: "structures_id"
+  add_foreign_key "structures", "characters"
+  add_foreign_key "structures", "items"
+  add_foreign_key "structures", "places"
 end
