@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Character.destroy_all
+Place.destroy_all
 
 # file = URI.open()
 character = Character.new(
@@ -246,3 +247,19 @@ character = Character.new(
 )
 # character.photo.attach(io: file, filename: "daulphin.png", content_type: "image/png")
 character.save
+
+# file = URI.open()
+place = Place.new(
+  name: 'Mountain',
+  typ: 'nature'
+)
+# place.photo.attach(io: file, filename: "mountain.png", content_type: "image/png")
+place.save
+
+# file = URI.open()
+place = Place.new(
+  name: 'Beach',
+  typ: 'nature'
+)
+# place.photo.attach(io: file, filename: "beach.png", content_type: "image/png")
+place.save
