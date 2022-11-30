@@ -3,6 +3,10 @@ class Story < ApplicationRecord
   belongs_to :user
   belongs_to :place
   belongs_to :item
-  has_many :story_structure
-  has_many :structure, through: :story_structure
+  has_many :initial
+  has_many :trigger
+  has_many :adventure1
+  has_many :adventure2
+  has_many :outcome
+  has_many :final
 end

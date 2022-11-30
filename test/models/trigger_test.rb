@@ -1,6 +1,6 @@
 require "test_helper"
 
-class StructuresControllerTest < ActionDispatch::IntegrationTest
+class TriggerTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

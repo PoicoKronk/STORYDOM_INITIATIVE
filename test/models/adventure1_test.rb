@@ -1,6 +1,6 @@
 require "test_helper"
 
-class StoryStructureTest < ActiveSupport::TestCase
+class Adventure1Test < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -5,8 +5,4 @@ Rails.application.routes.draw do
   resources :stories, only: [:index, :show, :new, :create, :destroy]
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :structures, only: [:new, :create]
-  resources :characters, only: [:new, :create]
-  resources :places, only: [:new, :create]
-  resources :items, only: [:new, :create]
 end
