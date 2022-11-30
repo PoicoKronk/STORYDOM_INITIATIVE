@@ -11,6 +11,11 @@ class StoriesController < ApplicationController
   end
 
   def create
+
+    @story.structure1 = @story.create_content(@story)
+    @story.structure2 = @story.create_content(@story)
+    @story.structure3 = @story.create_content(@story)
+    @story.structure4 = @story.create_content(@story)
   end
 
   def delete

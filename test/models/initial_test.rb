@@ -1,6 +1,6 @@
 require "test_helper"
 
-class StructureTest < ActiveSupport::TestCase
+class InitialTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
