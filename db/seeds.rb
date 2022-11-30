@@ -8,6 +8,7 @@
 
 Character.destroy_all
 Place.destroy_all
+Item.destroy_all
 
 # file = URI.open()
 character = Character.new(
@@ -263,3 +264,19 @@ place = Place.new(
 )
 # place.photo.attach(io: file, filename: "beach.png", content_type: "image/png")
 place.save
+
+# file = URI.open()
+item = Item.new(
+  name: 'Sword',
+  typ: 'Weapon'
+)
+# item.photo.attach(io: file, filename: "sword.png", content_type: "image/png")
+item.save
+
+# file = URI.open()
+item = Item.new(
+  name: 'Barbecue',
+  typ: 'Food'
+)
+# item.photo.attach(io: file, filename: "barbecue.png", content_type: "image/png")
+item.save
