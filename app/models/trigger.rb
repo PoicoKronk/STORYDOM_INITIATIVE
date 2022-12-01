@@ -7,5 +7,4 @@ class Trigger < ApplicationRecord
     "Suddenly, the #{story.character.name} saw a prince getting closer to the #{story.place.name}.",
     "Suddenly, the #{story.character.name} saw a prince getting closer to the #{story.place.name}."
   ]
-
 end
