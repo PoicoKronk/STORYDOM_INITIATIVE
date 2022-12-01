@@ -1,5 +1,6 @@
 # Cloudinary
 gem "dotenv-rails", groups: [:development, :test]
+gem "cloudinary"
 
 
 source "https://rubygems.org"

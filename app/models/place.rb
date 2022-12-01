@@ -1,3 +1,3 @@
 class Place < ApplicationRecord
-  has_many :story
+  has_many :stories
 end
