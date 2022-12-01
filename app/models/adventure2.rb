@@ -1,18 +1,15 @@
 class Adventure2 < ApplicationRecord
-  belongs_to :story
+  has_many :stories
 
-  CONTENTS = [
-    "The #{story.character.name} bravely climbed this one and grabbed the #{story.item.name} to fight the dragon.",
-    "The #{story.character.name} bravely climbed this one and grabbed the #{story.item.name} to fight the dragon.",
-    "The #{story.character.name} was aggressive. The battle was tough.",
-    "The #{story.character.name} was aggressive. The battle was tough."
-  ]
-
-
-
-  validates :content, inclusion: { in: CONTENTS }
+  # validates :content, inclusion: { in: contents }
 
   def create_content(story, index)
-    content = CONTENTS[index]
+    contents = [
+      "The #{story.character.name} bravely climbed this one and grabbed the #{story.item.name} to fight the dragon.",
+      "The #{story.character.name} bravely climbed this one and grabbed the #{story.item.name} to fight the dragon.",
+      "The #{story.character.name} was aggressive. The battle was tough.",
+      "The #{story.character.name} was aggressive. The battle was tough."
+    ]
+    content = contents[index]
   end
 end
