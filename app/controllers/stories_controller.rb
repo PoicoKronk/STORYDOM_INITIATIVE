@@ -69,17 +69,17 @@ class StoriesController < ApplicationController
 
   def story_initial(story)
     contents = [
-      "In the #{story.place.name}, a #{story.character.name} was looking for a powerful #{story.item.name}.",
-      "In the #{story.place.name}, a #{story.character.name} was looking for a powerful #{story.item.name}.",
-      "In the #{story.place.name}, a #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}.",
-      "In the #{story.place.name}, a #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}."
+      "In the #{story.place.name}, the #{story.character.name} was looking for a powerful #{story.item.name}.",
+      "In the #{story.place.name}, the #{story.character.name} was looking for a powerful #{story.item.name}.",
+      "In the #{story.place.name}, the #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}.",
+      "In the #{story.place.name}, the #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}."
     ]
     content = contents[story.number_index]
   end
 
   def story_trigger(story)
     contents = [
-      "Suddenly, a gust of wind struck the #{story.character.name} . A dragon was flying over #{story.character.pronoun}.",
+      "Suddenly, a gust of wind struck the #{story.character.name}. A dragon was flying over #{story.character.pronoun}.",
       "Suddenly, a gust of wind struck the #{story.character.name}. A dragon was flying over #{story.character.pronoun}.",
       "Suddenly, the #{story.character.name} saw a prince getting closer to the #{story.place.name}.",
       "Suddenly, the #{story.character.name} saw a prince getting closer to the #{story.place.name}."
@@ -119,8 +119,8 @@ class StoriesController < ApplicationController
 
   def story_final(story)
     contents = [
-      "The #{story.character.name} was happy to have found his #{story.item.name} and made a friend, the dragon through this journey.",
-      "The #{story.character.name} was more powerful with his new #{story.item.name} and was ready to conquer other lands.",
+      "The #{story.character.name} was happy to have found #{story.character.possessive} #{story.item.name} and made a friend, the dragon through this journey.",
+      "The #{story.character.name} was more powerful with #{story.character.possessive} new #{story.item.name} and was ready to conquer other lands.",
       "The #{story.character.name} had a great meal and continued to wait for a worthy master",
       "When #{story.character.name} and the prince woke up with the sun, they looked at each other and laughed. A friendship was born."
     ]

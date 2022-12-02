@@ -1,2 +1,0 @@
-class Final < ApplicationRecord
-end
