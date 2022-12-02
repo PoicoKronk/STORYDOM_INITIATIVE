@@ -92,6 +92,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_170657) do
     t.index ["user_id"], name: "index_stories_on_user_id"
   end
 
+  create_table "story_structures", force: :cascade do |t|
+    t.bigint "story_id", null: false
+    t.bigint "structures_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["story_id"], name: "index_story_structures_on_story_id"
+    t.index ["structures_id"], name: "index_story_structures_on_structures_id"
+  end
+
+  create_table "structures", force: :cascade do |t|
+    t.text "content"
+    t.integer "page_number"
+    t.string "char_type"
+    t.string "place_type"
+    t.string "item_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "triggers", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
