@@ -22,7 +22,7 @@ User.create!(
 character = Character.create(
   name: 'Prince',
   typ: 'Human',
-  gender: 'Male',
+  gender: 'He',
   pronoun: 'him',
   possessive: 'his',
   good: true,
@@ -33,7 +33,7 @@ character = Character.create(
 character = Character.create(
   name: 'Princess',
   typ: 'Human',
-  gender: 'Female',
+  gender: 'She',
   pronoun: 'her',
   possessive: 'her',
   good: true,
@@ -44,7 +44,7 @@ character = Character.create(
 character = Character.create(
   name: 'Knight',
   typ: 'Human',
-  gender: 'Male',
+  gender: 'He',
   pronoun: 'him',
   possessive: 'his',
   good: true,
@@ -56,7 +56,7 @@ character = Character.create(
   name: 'Hunter',
   typ: 'Human',
   gender: 'Male',
-  pronoun: 'him',
+  pronoun: 'He',
   possessive: 'his',
   good: true,
   photo: 'Hunter.png'
@@ -66,7 +66,7 @@ character = Character.create(
 character = Character.create(
   name: 'Adventurer',
   typ: 'Human',
-  gender: 'female',
+  gender: 'She',
   pronoun: 'her',
   possessive: 'her',
   good: true,
@@ -77,7 +77,7 @@ character = Character.create(
 character = Character.create(
   name: 'Pirate',
   typ: 'Human',
-  gender: 'Male',
+  gender: 'He',
   pronoun: 'him',
   possessive: 'his',
   good: true,
@@ -88,7 +88,7 @@ character = Character.create(
 character = Character.create(
   name: 'Cowboy',
   typ: 'Human',
-  gender: 'Male',
+  gender: 'He',
   pronoun: 'him',
   possessive: 'his',
   good: true,
@@ -110,7 +110,7 @@ character = Character.create(
 character = Character.create(
   name: 'Witch',
   typ: 'Creature',
-  gender: 'female',
+  gender: 'She',
   pronoun: 'her',
   possessive: 'her',
   good: true,
@@ -132,7 +132,7 @@ character = Character.create(
 character = Character.create(
   name: 'Fairy',
   typ: 'Creature',
-  gender: 'female',
+  gender: 'She',
   pronoun: 'her',
   possessive: 'her',
   good: true,
@@ -143,7 +143,7 @@ character = Character.create(
 character = Character.create(
   name: 'Elf',
   typ: 'Creature',
-  gender: 'Male',
+  gender: 'He',
   pronoun: 'him',
   possessive: 'his',
   good: true,
@@ -154,7 +154,7 @@ character = Character.create(
 character = Character.create(
   name: 'Mermaid',
   typ: 'Creature',
-  gender: 'female',
+  gender: 'She',
   pronoun: 'her',
   possessive: 'her',
   good: true,
