@@ -71,8 +71,8 @@ class StoriesController < ApplicationController
     contents = [
       "In the #{story.place.name}, the #{story.character.name} was looking for a powerful #{story.item.name}.",
       "In the #{story.place.name}, the #{story.character.name} was looking for a powerful #{story.item.name}.",
-      "In the #{story.place.name}, the #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}.",
-      "In the #{story.place.name}, the #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}."
+      "In the #{story.place.name}, the #{story.character.name} was flying in the sky. #{story.character.gender} was guarding a powerful #{story.item.name}.",
+      "In the #{story.place.name}, the #{story.character.name} was flying in the sky. #{story.character.gender} was guarding a powerful #{story.item.name}."
     ]
     content = contents[story.number_index]
   end
