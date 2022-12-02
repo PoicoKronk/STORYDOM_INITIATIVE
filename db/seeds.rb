@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Story.destroy_all
 Character.destroy_all
 Place.destroy_all
 Item.destroy_all
@@ -335,3 +336,15 @@ item = Item.new(
 )
 # item.photo.attach(io: file, filename: "barbecue.png", content_type: "image/png")
 item.save
+
+# initial = Initial.create(
+#   content: "In the #{story.place.name}, a #{story.character.name} was looking for a powerful #{story.item.name}.")
+
+# initial = Initial.create(
+#   content: "In the #{story.place.name}, a #{story.character.name} was looking for a powerful #{story.item.name}.")
+
+# initial = Initial.create(
+#   content: "In the #{story.place.name}, a #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}.")
+
+# initial = Initial.create(
+#   content: "In the #{story.place.name}, a #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}.")

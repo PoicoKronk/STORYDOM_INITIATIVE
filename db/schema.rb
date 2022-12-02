@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_30_170657) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_01_155031) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_170657) do
     t.boolean "good"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pronoun"
+    t.string "possessive"
   end
 
   create_table "finals", force: :cascade do |t|
@@ -72,23 +74,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_170657) do
     t.bigint "user_id", null: false
     t.bigint "place_id", null: false
     t.bigint "item_id", null: false
-    t.bigint "initial_id", null: false
-    t.bigint "trigger_id", null: false
-    t.bigint "adventure1_id", null: false
-    t.bigint "adventure2_id", null: false
-    t.bigint "outcome_id", null: false
-    t.bigint "final_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["adventure1_id"], name: "index_stories_on_adventure1_id"
-    t.index ["adventure2_id"], name: "index_stories_on_adventure2_id"
+    t.integer "number_index"
     t.index ["character_id"], name: "index_stories_on_character_id"
-    t.index ["final_id"], name: "index_stories_on_final_id"
-    t.index ["initial_id"], name: "index_stories_on_initial_id"
     t.index ["item_id"], name: "index_stories_on_item_id"
-    t.index ["outcome_id"], name: "index_stories_on_outcome_id"
     t.index ["place_id"], name: "index_stories_on_place_id"
-    t.index ["trigger_id"], name: "index_stories_on_trigger_id"
     t.index ["user_id"], name: "index_stories_on_user_id"
   end
 
@@ -110,14 +101,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_170657) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "stories", "adventure1s"
-  add_foreign_key "stories", "adventure2s"
   add_foreign_key "stories", "characters"
-  add_foreign_key "stories", "finals"
-  add_foreign_key "stories", "initials"
   add_foreign_key "stories", "items"
-  add_foreign_key "stories", "outcomes"
   add_foreign_key "stories", "places"
-  add_foreign_key "stories", "triggers"
   add_foreign_key "stories", "users"
 end
