@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 Story.destroy_all
 Character.destroy_all
 Place.destroy_all
 Item.destroy_all
 User.destroy_all
-
 
 
 User.create!(
@@ -19,8 +19,7 @@ User.create!(
 )
 
 
-# file = URI.open()
-character = Character.new(
+character = Character.create(
   name: 'Prince',
   typ: 'Human',
   gender: 'Male',
@@ -29,11 +28,9 @@ character = Character.new(
   good: true,
   photo: 'Prince.png'
 )
-# # character.photo.attach(io: file, filename: "prince.png", content_type: "images/png")
-character.save
 
-# file = URI.open()
-character = Character.new(
+
+character = Character.create(
   name: 'Princess',
   typ: 'Human',
   gender: 'Female',
@@ -42,48 +39,20 @@ character = Character.new(
   good: true,
   photo: 'Princess.png'
 )
-# character.photo.attach(io: file, filename: "princess.png", content_type: "images/png")
-character.save
 
-# file = URI.open()
-# character = Character.new(
-#   name: 'Astronaut',
-#   typ: 'Human',
-#   gender: 'Male',
-#   pronoun: 'him',
-#   possessive: 'his',
-#   good: true
-# )
-# character.photo.attach(io: file, filename: "astronaut.png", content_type: "images/png")
-# character.save
 
-# file = URI.open()
-character = Character.new(
-  name: 'Pirate',
+character = Character.create(
+  name: 'Knight',
   typ: 'Human',
   gender: 'Male',
   pronoun: 'him',
   possessive: 'his',
   good: true,
-  photo: 'Pirate.png'
+  photo: 'Knight.png'
 )
-# character.photo.attach(io: file, filename: "pirate.png", content_type: "images/png")
-character.save
 
-# file = URI.open()
-# character = Character.new(
-#   name: 'Cowboy',
-#   typ: 'Human',
-#   gender: 'Male',
-#   pronoun: 'him',
-#   possessive: 'his',
-#   good: true
-# )
-# character.photo.attach(io: file, filename: "cowboy.png", content_type: "images/png")
-# character.save
 
-# file = URI.open()
-character = Character.new(
+character = Character.create(
   name: 'Hunter',
   typ: 'Human',
   gender: 'Male',
@@ -92,25 +61,10 @@ character = Character.new(
   good: true,
   photo: 'Hunter.png'
 )
-# character.photo.attach(io: file, filename: "hunter.png", content_type: "images/png")
-character.save
 
-# file = URI.open()
-character = Character.new(
-  name: 'knight',
-  typ: 'Human',
-  gender: 'Male',
-  pronoun: 'him',
-  possessive: 'his',
-  good: true,
-  photo: 'Knight.png'
-)
-# character.photo.attach(io: file, filename: "knight.png", content_type: "images/png")
-character.save
 
-# file = URI.open()
-character = Character.new(
-  name: 'adventurer',
+character = Character.create(
+  name: 'Adventurer',
   typ: 'Human',
   gender: 'female',
   pronoun: 'her',
@@ -118,35 +72,31 @@ character = Character.new(
   good: true,
   photo: 'Adventurer.png'
 )
-# character.photo.attach(io: file, filename: "adventurer.png", content_type: "images/png")
-character.save
 
-# file = URI.open()
-# character = Character.new(
-#   name: 'Fairy',
-#   typ: 'creature',
-#   gender: 'female',
-#   pronoun: 'her',
-#   possessive: 'her',
-#   good: true
-# )
-# character.photo.attach(io: file, filename: "fairy.png", content_type: "images/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
-#   name: 'Witch',
-#   typ: 'Creature',
-#   gender: 'female',
-#   pronoun: 'her',
-#   possessive: 'her',
-#   good: true
-# )
-# character.photo.attach(io: file, filename: "witch.png", content_type: "images/png")
-# character.save
+character = Character.create(
+  name: 'Pirate',
+  typ: 'Human',
+  gender: 'Male',
+  pronoun: 'him',
+  possessive: 'his',
+  good: true,
+  photo: 'Pirate.png'
+)
 
-# file = URI.open()
-character = Character.new(
+
+character = Character.create(
+  name: 'Cowboy',
+  typ: 'Human',
+  gender: 'Male',
+  pronoun: 'him',
+  possessive: 'his',
+  good: true,
+  photo: 'Cowboy.png'
+)
+
+
+character = Character.create(
   name: 'Dragon',
   typ: 'Creature',
   gender: 'Male',
@@ -155,205 +105,288 @@ character = Character.new(
   good: true,
   photo: 'Dragon.png'
 )
-# character.photo.attach(io: file, filename: "dragon.png", content_type: "images/png")
-character.save
 
-# file = URI.open()
-# character = Character.new(
+
+character = Character.create(
+  name: 'Witch',
+  typ: 'Creature',
+  gender: 'female',
+  pronoun: 'her',
+  possessive: 'her',
+  good: true,
+  photo: 'Witch.png'
+)
+
+
+# character = Character.create(
 #   name: 'Ghost',
 #   typ: 'Creature',
 #   gender: 'Male',
 #   pronoun: 'him',
 #   possessive: 'his',
-#   good: true
+#   good: true,
+#   photo: 'Ghost.png'
 # )
-# character.photo.attach(io: file, filename: "ghost.png", content_type: "images/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
-#   name: 'Mermaid',
-#   typ: 'Creature',
-#   gender: 'female',
-#   pronoun: 'her',
-#   possessive: 'her',
-#   good: true
-# )
-# character.photo.attach(io: file, filename: "mermaid.png", content_type: "images/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+character = Character.create(
+  name: 'Fairy',
+  typ: 'Creature',
+  gender: 'female',
+  pronoun: 'her',
+  possessive: 'her',
+  good: true,
+  photo: 'Fairy.png'
+)
+
+
+character = Character.create(
+  name: 'Elf',
+  typ: 'Creature',
+  gender: 'Male',
+  pronoun: 'him',
+  possessive: 'his',
+  good: true,
+  photo: 'Elf.png'
+)
+
+
+character = Character.create(
+  name: 'Mermaid',
+  typ: 'Creature',
+  gender: 'female',
+  pronoun: 'her',
+  possessive: 'her',
+  good: true,
+  photo: 'Mermaid.png'
+)
+
+
+# character = Character.create(
 #   name: 'Werewolf',
 #   typ: 'Creature',
 #   gender: 'Male',
 #   pronoun: 'him',
 #   possessive: 'his',
-#   good: true
+#   good: true,
+#   photo: 'Werewolf.png'
 # )
-# character.photo.attach(io: file, filename: "werewolf.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
-#   name: 'Elf',
-#   typ: 'Creature',
-#   gender: 'Male',
-#   pronoun: 'him',
-#   possessive: 'his',
-#   good: true
-# )
-# character.photo.attach(io: file, filename: "elf.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+# character = Character.create(
 #   name: 'Vampire',
 #   typ: 'Creature',
 #   gender: 'Male',
 #   pronoun: 'him',
 #   possessive: 'his',
-#   good: true
+#   good: true,
+#   photo: 'Vampire.png'
 # )
-# character.photo.attach(io: file, filename: "vampire.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+
+# character = Character.create(
 #   name: 'Dog',
-#   typ: 'animal',
+#   typ: 'Animal',
 #   gender: 'neutral',
 #   pronoun: 'it',
 #   possessive: 'its',
-#   good: true
+#   good: true,
+#   photo: 'Dog.png'
 # )
-# character.photo.attach(io: file, filename: "dog.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+
+# character = Character.create(
 #   name: 'Cat',
-#   typ: 'animals',
+#   typ: 'Animal',
 #   gender: 'neutral',
 #   pronoun: 'it',
 #   possessive: 'its',
-#   good: true
+#   good: true,
+#   photo: 'Cat.png'
 # )
-# character.photo.attach(io: file, filename: "cat.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+
+# character = Character.create(
 #   name: 'Bird',
-#   typ: 'animal',
+#   typ: 'Animal',
 #   gender: 'neutral',
 #   pronoun: 'it',
 #   possessive: 'its',
-#   good: true
+#   good: true,
+#   photo: 'Bird.png'
 # )
-# character.photo.attach(io: file, filename: "bird.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+
+# character = Character.create(
 #   name: 'Lion',
-#   typ: 'animal',
+#   typ: 'Animal',
 #   gender: 'neutral',
 #   pronoun: 'it',
 #   possessive: 'its',
-#   good: true
+#   good: true,
+#   photo: 'Lion.png'
 # )
-# character.photo.attach(io: file, filename: "lion.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+
+
+# character = Character.create(
 #   name: 'Monkey',
-#   typ: 'animal',
+#   typ: 'Animal',
 #   gender: 'neutral',
 #   pronoun: 'it',
 #   possessive: 'its',
-#   good: true
+#   good: true,
+#   photo: 'Monkey.png'
 # )
-# character.photo.attach(io: file, filename: "monkey.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+
+# character = Character.create(
 #   name: 'Mouse',
-#   typ: 'animal',
+#   typ: 'Animal',
 #   gender: 'neutral',
 #   pronoun: 'it',
 #   possessive: 'its',
-#   good: true
+#   good: true,
+#   photo: 'Mouse.png'
 # )
-# character.photo.attach(io: file, filename: "mouse.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+
+# character = Character.create(
 #   name: 'Rabbit',
 #   typ: 'animal',
 #   gender: 'neutral',
 #   pronoun: 'it',
 #   possessive: 'its',
-#   good: true
+#   good: true,
+#   photo: 'Rabbit.png'
 # )
-# character.photo.attach(io: file, filename: "rabbit.png", content_type: "image/png")
-# character.save
 
-# file = URI.open()
-# character = Character.new(
+
+# character = Character.create(
 #   name: 'Daulphin',
 #   typ: 'animal',
 #   gender: 'neutral',
 #   pronoun: 'it',
 #   possessive: 'its',
-#   good: true
+#   good: true,
+#   photo: 'Daulphin.png'
 # )
-# character.photo.attach(io: file, filename: "daulphin.png", content_type: "image/png")
-character.save
 
-# file = URI.open()
-place = Place.new(
+
+place = Place.create(
   name: 'Mountain',
-  typ: 'nature'
+  typ: 'Nature',
+  # photo: 'Mountain.svg'
 )
-# place.photo.attach(io: file, filename: "mountain.png", content_type: "image/png")
-place.save
 
-# file = URI.open()
-# place = Place.new(
+
+place = Place.create(
+  name: 'Forest',
+  typ: 'Nature',
+  # photo: 'Forest.svg'
+)
+
+
+# place = Place.create(
 #   name: 'Beach',
-#   typ: 'nature'
+#   typ: 'Nature',
+#   photo: 'Beach.svg'
 # )
-# place.photo.attach(io: file, filename: "beach.png", content_type: "image/png")
-# place.save
 
-# file = URI.open()
-item = Item.new(
+
+# place = Place.create(
+#   name: 'Cavern',
+#   typ: 'Nature',
+#   photo: 'Cavern.svg'
+# )
+
+
+# place = Place.create(
+#   name: 'Castle',
+#   typ: 'Building',
+#   photo: 'Castle.svg'
+# )
+
+
+item = Item.create(
   name: 'Sword',
-  typ: 'Weapon'
+  typ: 'Weapon',
+  # photo: 'Sword.png'
 )
-# item.photo.attach(io: file, filename: "sword.png", content_type: "image/png")
-item.save
 
-# file = URI.open()
-# item = Item.new(
-#   name: 'Barbecue',
-#   typ: 'Food'
+
+item = Item.create(
+  name: 'Bow',
+  typ: 'Weapon',
+  # photo: 'Bow.png'
+)
+
+
+item = Item.create(
+  name: 'Shield',
+  typ: 'Weapon',
+  # photo: 'Shield.png'
+)
+
+
+item = Item.create(
+  name: 'Axe',
+  typ: 'Weapon',
+  # photo: 'Axe.png'
+)
+
+
+item = Item.create(
+  name: 'Wand',
+  typ: 'Weapon',
+  # photo: 'Wand.png'
+)
+
+
+# item = Item.create(
+#   name: 'Whip',
+#   typ: 'Weapon',
+#   photo: 'Whip.png'
 # )
-# item.photo.attach(io: file, filename: "barbecue.png", content_type: "image/png")
-# item.save
 
-# initial = Initial.create(
-#   content: "In the #{story.place.name}, a #{story.character.name} was looking for a powerful #{story.item.name}.")
 
-# initial = Initial.create(
-#   content: "In the #{story.place.name}, a #{story.character.name} was looking for a powerful #{story.item.name}.")
+# item = Item.create(
+#   name: 'Hat',
+#   typ: 'Clothes',
+#   photo: 'Hat.png'
+# )
 
-# initial = Initial.create(
-#   content: "In the #{story.place.name}, a #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}.")
 
-# initial = Initial.create(
-#   content: "In the #{story.place.name}, a #{story.character.name} was flying in the sky. It was guarding a powerful #{story.item.name}.")
+# item = Item.create(
+#   name: 'Crown',
+#   typ: 'Clothes',
+#   photo: 'Crown.png'
+# )
+
+
+# item = Item.create(
+#   name: 'Cap',
+#   typ: 'Clothes',
+#   photo: 'Cap.png'
+# )
+
+
+# item = Item.create(
+#   name: 'Scarf',
+#   typ: 'Clothes',
+#   photo: 'Scarf.png'
+# )
+
+
+# item = Item.create(
+#   name: 'Glasses',
+#   typ: 'Clothes',
+#   photo: 'Glasses.png'
+# )
+
+
+# item = Item.create(
+#   name: 'Gloves',
+#   typ: 'Clothes',
+#   photo: 'Gloves.png'
+# )

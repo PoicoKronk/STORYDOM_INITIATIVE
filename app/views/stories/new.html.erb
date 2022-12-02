@@ -1,8 +1,14 @@
-<div class="homepage">
+<div class="new">
   <%= simple_form_for @story do |f| %>
-    <%= f.association :character, collection: Character::CHARACTER_NAMES %>
+  <div>
+    <%= f.association :character, collection: Character::CHARACTER_NAMES, class:"story-btn" %>
+  </div>
+  <div>
     <%= f.association :item, collection: Item::ITEM_NAMES %>
+  </div>
+  <div>
     <%= f.association :place, collection: Place::PLACE_NAMES %>
-    <%= f.submit %>
+  </div>
+    <p class="next"><%= f.submit 'Start', class:"btn btn-outline-danger" %></p>
   <% end %>
 </div>

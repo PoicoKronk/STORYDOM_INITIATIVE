@@ -1,5 +1,7 @@
 .page-global {
-  background-color: rgb(0, 0, 80);
+  background-image: asset-url("Mountain.png");
+  background-size: cover;
+  background-position: center;
   height: 80vh;
 }
 
@@ -25,4 +27,34 @@
     bottom: 0;
     right: 0;
   }
+
+  .previous {
+    font-family: 'Uncial Antiqua', cursive;
+    display: block;
+    float: left;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.next {
+  font-family: 'Uncial Antiqua', cursive;
+  display: block;
+  float: right;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.page-stickers{
+  height: 80%;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
