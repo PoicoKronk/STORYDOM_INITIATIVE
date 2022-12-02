@@ -72,8 +72,8 @@ class StoriesController < ApplicationController
     contents = [
       "When the #{story.character.name} realized, the dragon was protecting a #{story.item.name} on the top of the #{story.place.name}.",
       "When the #{story.character.name} realized, the dragon was protecting a #{story.item.name} on the top of the #{story.place.name}.",
-      "When #{story.character.name} realized the prince was after its treasure, the dragon was ready to fight back.",
-      "When #{story.character.name} realized the prince was after its treasure, the dragon was ready to fight back."
+      "When #{story.character.name} realized the prince was after its treasure, the #{story.character.name} was ready to fight back.",
+      "When #{story.character.name} realized the prince was after its treasure, the #{story.character.name} was ready to fight back."
     ]
     content = contents[story.number_index]
   end
@@ -90,8 +90,8 @@ class StoriesController < ApplicationController
 
   def story_outcome(story)
     contents = [
-      "The dragon defeated, the #{story.character.name} became #{story.character.gender} master.",
-      "The dragon defeated, the #{story.character.name} came back in #{story.character.gender} kingdom.",
+      "The dragon defeated, the #{story.character.name} became #{story.character.possessive} master.",
+      "The dragon defeated, the #{story.character.name} came back in #{story.character.possessive} kingdom.",
       "The #{story.character.name} wanted to end it. It spitted out fire on its enemy leaving a roasted prince.",
       "Both the #{story.character.name} and the prince were exhausted. They finally fell asleep."
     ]
