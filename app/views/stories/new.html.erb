@@ -1,6 +1,8 @@
-<%= simple_form_for @story do |f| %>
-<%= f.association :character, collection: Character::CHARACTER_NAMES %>
-<%= f.association :item, collection: Item::ITEM_NAMES %>
-<%= f.association :place, collection: Place::PLACE_NAMES %>
-<%= f.submit %>
-<% end %>
+<div class="homepage">
+  <%= simple_form_for @story do |f| %>
+    <%= f.association :character, collection: Character::CHARACTER_NAMES %>
+    <%= f.association :item, collection: Item::ITEM_NAMES %>
+    <%= f.association :place, collection: Place::PLACE_NAMES %>
+    <%= f.submit %>
+  <% end %>
+</div>

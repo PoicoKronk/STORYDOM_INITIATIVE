@@ -1,21 +1,24 @@
-<div class="logo">
-<%= image_tag "storydom.png" %>
-</div>
-<div class="home-btn">
-  <div class="story-btn">
-  <%= link_to "Create a Story", new_story_path%>
+<div class="homepage">
+  <div class="logo">
+    <%= image_tag "storydom.png" %>
   </div>
 
-  <div class="story-btn">
-  <%= link_to "Load a story", stories_path%>
-  </div>
+  <div class="homepage-btns">
+    <div class="story-btn">
+      <%= link_to "Create a Story", new_story_path%>
+    </div>
 
-<div class="story-btn">
-  <%= link_to "Settings", new_story_path%>
-  </div>
+    <div class="story-btn">
+      <%= link_to "Load a story", stories_path%>
+    </div>
 
-  <div class="story-btn">
-  <%= link_to "Exit", new_story_path%>
-  </div>
+    <div class="story-btn">
+      <%= link_to "Settings", new_story_path%>
+    </div>
 
+    <div class="story-btn">
+      <%= link_to "Exit", new_story_path%>
+    </div>
+
+  </div>
 </div>
