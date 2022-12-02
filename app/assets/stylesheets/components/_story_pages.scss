@@ -1,7 +1,28 @@
 .page-global {
   background-color: rgb(0, 0, 80);
+  height: 80vh;
 }
 
 .page-text {
+  background-color: rgba(250, 234, 196, 0.886);
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .text {
     font-family: 'Uncial Antiqua', cursive;
+    font-size: 200%;
+    text-align: center;
+  }
+  .next {
+    font-family: 'Uncial Antiqua', cursive;
+    display: block;
+    float: right;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }
