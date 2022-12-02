@@ -3,8 +3,7 @@
 </div>
 
 <div class="page-text">
-  <%= @story_init %>
-   <%= image_tag "#{@story.character.photo}" %>
-   <%= image_tag "#{@story.character.photo}" %>
-  <%= link_to "Next",  page2_story_path(@story) %>
+  <p class="text"><%= @story_init %></p>
+
+  <p class="next"><%= link_to "Next", page2_story_path(@story), class:"btn btn-outline-danger" %></p>
 </div>
