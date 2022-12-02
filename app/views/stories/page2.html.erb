@@ -3,7 +3,7 @@
 </div>
 
 <div class="page-text">
-  <%= @story_trig %>
+  <p class="text"><%= @story_trig %></p>
 
-  <%= link_to "Next",  page3_story_path(@story) %>
+  <p class="next"><%= link_to "Next", page3_story_path(@story), class:"btn btn-outline-danger" %></p>
 </div>

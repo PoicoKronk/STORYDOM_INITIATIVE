@@ -5,16 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
 Story.destroy_all
 Character.destroy_all
 Place.destroy_all
 Item.destroy_all
 User.destroy_all
 
+
+
 User.create!(
   email: 'loulou@storydom.com',
-  password: 'storydom'
+  password: 'password'
 )
 
 
@@ -25,9 +26,10 @@ character = Character.new(
   gender: 'Male',
   pronoun: 'him',
   possessive: 'his',
-  good: true
+  good: true,
+  photo: 'Prince.png'
 )
-# character.photo.attach(io: file, filename: "prince.png", content_type: "image/png")
+# # character.photo.attach(io: file, filename: "prince.png", content_type: "images/png")
 character.save
 
 # file = URI.open()
@@ -37,9 +39,10 @@ character = Character.new(
   gender: 'Female',
   pronoun: 'her',
   possessive: 'her',
-  good: true
+  good: true,
+  photo: 'Princess.png'
 )
-# character.photo.attach(io: file, filename: "princess.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "princess.png", content_type: "images/png")
 character.save
 
 # file = URI.open()
@@ -51,7 +54,7 @@ character.save
 #   possessive: 'his',
 #   good: true
 # )
-# character.photo.attach(io: file, filename: "astronaut.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "astronaut.png", content_type: "images/png")
 # character.save
 
 # file = URI.open()
@@ -61,10 +64,11 @@ character = Character.new(
   gender: 'Male',
   pronoun: 'him',
   possessive: 'his',
-  good: true
+  good: true,
+  photo: 'Pirate.png'
 )
-# character.photo.attach(io: file, filename: "pirate.png", content_type: "image/png")
-# character.save
+# character.photo.attach(io: file, filename: "pirate.png", content_type: "images/png")
+character.save
 
 # file = URI.open()
 # character = Character.new(
@@ -75,7 +79,7 @@ character = Character.new(
 #   possessive: 'his',
 #   good: true
 # )
-# character.photo.attach(io: file, filename: "cowboy.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "cowboy.png", content_type: "images/png")
 # character.save
 
 # file = URI.open()
@@ -85,9 +89,10 @@ character = Character.new(
   gender: 'Male',
   pronoun: 'him',
   possessive: 'his',
-  good: true
+  good: true,
+  photo: 'Hunter.png'
 )
-# character.photo.attach(io: file, filename: "hunter.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "hunter.png", content_type: "images/png")
 character.save
 
 # file = URI.open()
@@ -97,9 +102,10 @@ character = Character.new(
   gender: 'Male',
   pronoun: 'him',
   possessive: 'his',
-  good: true
+  good: true,
+  photo: 'Knight.png'
 )
-# character.photo.attach(io: file, filename: "knight.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "knight.png", content_type: "images/png")
 character.save
 
 # file = URI.open()
@@ -109,9 +115,10 @@ character = Character.new(
   gender: 'female',
   pronoun: 'her',
   possessive: 'her',
-  good: true
+  good: true,
+  photo: 'Adventurer.png'
 )
-# character.photo.attach(io: file, filename: "adventurer.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "adventurer.png", content_type: "images/png")
 character.save
 
 # file = URI.open()
@@ -123,7 +130,7 @@ character.save
 #   possessive: 'her',
 #   good: true
 # )
-# character.photo.attach(io: file, filename: "fairy.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "fairy.png", content_type: "images/png")
 # character.save
 
 # file = URI.open()
@@ -135,7 +142,7 @@ character.save
 #   possessive: 'her',
 #   good: true
 # )
-# character.photo.attach(io: file, filename: "witch.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "witch.png", content_type: "images/png")
 # character.save
 
 # file = URI.open()
@@ -145,9 +152,10 @@ character = Character.new(
   gender: 'Male',
   pronoun: 'it',
   possessive: 'its',
-  good: true
+  good: true,
+  photo: 'Dragon.png'
 )
-# character.photo.attach(io: file, filename: "dragon.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "dragon.png", content_type: "images/png")
 character.save
 
 # file = URI.open()
@@ -159,7 +167,7 @@ character.save
 #   possessive: 'his',
 #   good: true
 # )
-# character.photo.attach(io: file, filename: "ghost.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "ghost.png", content_type: "images/png")
 # character.save
 
 # file = URI.open()
@@ -171,7 +179,7 @@ character.save
 #   possessive: 'her',
 #   good: true
 # )
-# character.photo.attach(io: file, filename: "mermaid.png", content_type: "image/png")
+# character.photo.attach(io: file, filename: "mermaid.png", content_type: "images/png")
 # character.save
 
 # file = URI.open()
