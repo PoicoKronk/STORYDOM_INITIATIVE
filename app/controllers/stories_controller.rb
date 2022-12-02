@@ -20,7 +20,7 @@ class StoriesController < ApplicationController
     @story.item_id = Item.find_by(name: params[:story][:item_id]).id
     @story.place_id = Place.find_by(name: params[:story][:place_id]).id
 
-    @story.number_index = rand(1..4)
+    @story.number_index = rand(0..3)
 
     if @story.save
       redirect_to page1_story_path(@story)
