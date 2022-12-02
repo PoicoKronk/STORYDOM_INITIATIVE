@@ -122,7 +122,7 @@ class StoriesController < ApplicationController
       "The #{story.character.name} was happy to have found #{story.character.possessive} #{story.item.name} and made a friend, the dragon through this journey.",
       "The #{story.character.name} was more powerful with #{story.character.possessive} new #{story.item.name} and was ready to conquer other lands.",
       "The #{story.character.name} had a great meal and continued to wait for a worthy master",
-      "When #{story.character.name} and the prince woke up with the sun, they looked at each other and laughed. A friendship was born."
+      "When the #{story.character.name} and the prince woke up with the sun, they looked at each other and laughed. A friendship was born."
     ]
     content = contents[story.number_index]
   end
