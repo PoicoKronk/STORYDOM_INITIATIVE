@@ -1,18 +1,12 @@
 class StoriesController < ApplicationController
-  skip_before_action :authenticate_user!
-  before_action :set_story, only: [:show, :destroy ]
+  # skip_before_action :authenticate_user!
+  before_action :set_story, only: [:show, :destroy, :page1, :page2, :page3, :page4, :page5, :page6]
 
   def index
     @stories = Story.all
   end
 
   def show
-    @story_init = self.story_initial(@story)
-    @story_trig = self.story_trigger(@story)
-    @story_adv1 = self.story_adventure1(@story)
-    @story_adv2 = self.story_adventure2(@story)
-    @story_out = self.story_outcome(@story)
-    @story_fin = self.story_final(@story)
   end
 
   def new
@@ -21,7 +15,7 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(story_params)
-    @story.user_id = 3
+    @story.user_id = current_user.id
     @story.character_id = Character.find_by(name: params[:story][:character_id]).id
     @story.item_id = Item.find_by(name: params[:story][:item_id]).id
     @story.place_id = Place.find_by(name: params[:story][:place_id]).id
@@ -29,14 +23,10 @@ class StoriesController < ApplicationController
     @story.number_index = rand(1..4)
 
     if @story.save
-      redirect_to root_path
+      redirect_to page1_story_path(@story)
     else
-      raise
+      render :new, status: :unprocessable_entity
     end
-    #   redirect_to root_path, notice: "Story was successfully created."
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
   end
 
   def destroy
@@ -47,6 +37,35 @@ class StoriesController < ApplicationController
   def set_story
     @story = Story.find(params[:id])
   end
+
+  def story_params
+    params.require(:story).permit(:character, :place, :item)
+  end
+
+  def page1
+    @story_init = self.story_initial(@story)
+  end
+
+  def page2
+    @story_trig = self.story_trigger(@story)
+  end
+
+  def page3
+    @story_adv1 = self.story_adventure1(@story)
+  end
+
+  def page4
+    @story_adv2 = self.story_adventure2(@story)
+  end
+
+  def page5
+    @story_out = self.story_outcome(@story)
+  end
+
+  def page6
+    @story_fin = self.story_final(@story)
+  end
+
 
   def story_initial(story)
     contents = [
@@ -60,8 +79,8 @@ class StoriesController < ApplicationController
 
   def story_trigger(story)
     contents = [
-      "Suddenly, a gust of wind struck the #{story.character.name} . A dragon was flying over #{story.character.gender}.",
-      "Suddenly, a gust of wind struck the #{story.character.name} . A dragon was flying over #{story.character.gender}.",
+      "Suddenly, a gust of wind struck the #{story.character.name} . A dragon was flying over #{story.character.pronoun}.",
+      "Suddenly, a gust of wind struck the #{story.character.name}. A dragon was flying over #{story.character.pronoun}.",
       "Suddenly, the #{story.character.name} saw a prince getting closer to the #{story.place.name}.",
       "Suddenly, the #{story.character.name} saw a prince getting closer to the #{story.place.name}."
     ]
@@ -72,8 +91,8 @@ class StoriesController < ApplicationController
     contents = [
       "When the #{story.character.name} realized, the dragon was protecting a #{story.item.name} on the top of the #{story.place.name}.",
       "When the #{story.character.name} realized, the dragon was protecting a #{story.item.name} on the top of the #{story.place.name}.",
-      "When #{story.character.name} realized the prince was after its treasure, the #{story.character.name} was ready to fight back.",
-      "When #{story.character.name} realized the prince was after its treasure, the #{story.character.name} was ready to fight back."
+      "When the #{story.character.name} realized the prince was after its treasure, the #{story.character.name} was ready to fight back.",
+      "When the #{story.character.name} realized the prince was after its treasure, the #{story.character.name} was ready to fight back."
     ]
     content = contents[story.number_index]
   end
@@ -108,7 +127,4 @@ class StoriesController < ApplicationController
     content = contents[story.number_index]
   end
 
-  def story_params
-    params.require(:story).permit(:character, :place, :item)
-  end
 end
