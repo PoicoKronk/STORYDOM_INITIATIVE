@@ -1,5 +1,5 @@
 class Character < ApplicationRecord
-  has_many :story
+  has_many :stories
 
   validates :name, :typ, :gender, :good, presence: true
 end

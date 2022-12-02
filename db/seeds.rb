@@ -9,6 +9,13 @@
 Character.destroy_all
 Place.destroy_all
 Item.destroy_all
+User.destroy_all
+
+User.create!(
+  email: 'loulou@storydom.com',
+  password: 'storydom'
+)
+
 
 # file = URI.open()
 character = Character.new(
