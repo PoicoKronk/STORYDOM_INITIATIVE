@@ -272,20 +272,6 @@ character = Character.create(
 # )
 
 
-place = Place.create(
-  name: 'Mountain',
-  typ: 'Nature',
-  # photo: 'Mountain.svg'
-)
-
-
-place = Place.create(
-  name: 'Forest',
-  typ: 'Nature',
-  # photo: 'Forest.svg'
-)
-
-
 # place = Place.create(
 #   name: 'Beach',
 #   typ: 'Nature',
@@ -310,35 +296,35 @@ place = Place.create(
 item = Item.create(
   name: 'Sword',
   typ: 'Weapon',
-  # photo: 'Sword.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670249654/Storydom/short_sword_nzu78v.png'
 )
 
 
 item = Item.create(
   name: 'Bow',
   typ: 'Weapon',
-  # photo: 'Bow.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670250703/Storydom/bow2_nbqrqn.png'
 )
 
 
 item = Item.create(
   name: 'Shield',
   typ: 'Weapon',
-  # photo: 'Shield.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670249654/Storydom/shield_izijmz.png'
 )
 
 
 item = Item.create(
   name: 'Axe',
   typ: 'Weapon',
-  # photo: 'Axe.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670249653/Storydom/axe_p0cm4w.png'
 )
 
 
 item = Item.create(
   name: 'Wand',
   typ: 'Weapon',
-  # photo: 'Wand.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670250703/Storydom/wand_gvahkr.png'
 )
 
 
@@ -389,3 +375,16 @@ item = Item.create(
 #   typ: 'Clothes',
 #   photo: 'Gloves.png'
 # )
+
+place = Place.create(
+  name: 'Mountain',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670250975/Storydom/Mountain_mlgegz.png'
+)
+
+
+place = Place.create(
+  name: 'Forest',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670250974/Storydom/forest_xmgflb.jpg'
+)
