@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   # skip_before_action :authenticate_user!
-  before_action :set_story, only: [:show, :destroy, :page1, :page2, :page3, :page4, :page5, :page6]
+  before_action :set_story, only: [:show, :edit, :update, :end, :destroy, :page1, :page2, :page3, :page4, :page5, :page6]
 
   def index
     @stories = Story.all
@@ -32,7 +32,25 @@ class StoriesController < ApplicationController
     end
   end
 
+  def end
+  end
+
+  def edit
+  end
+
+  def update
+    if @story.update(story_params)
+      redirect_to stories_path, notice: "Story successfully saved."
+    else
+      raise
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def destroy
+    @story.destroy
+
+    redirect_to stories_path
   end
 
   # private
@@ -42,7 +60,7 @@ class StoriesController < ApplicationController
   end
 
   def story_params
-    params.require(:story).permit(:character, :place, :item)
+    params.require(:story).permit(:character, :place, :item, :title)
   end
 
   def page1

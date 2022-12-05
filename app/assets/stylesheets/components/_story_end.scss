@@ -1,28 +1,36 @@
 // Specific CSS for your home-page
-.homepage {
+.endpage {
   background-image: url(https://static.vecteezy.com/system/resources/previews/001/846/790/non_2x/blue-watercolor-night-sky-background-free-vector.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 
-.logo {
+.end-title {
+  font-family: 'Uncial Antiqua', cursive;
+  font-size: 100px;
+  text-decoration: none;
+  color: black;
   display: flex;
   justify-content: center;
-  img {
-    padding-top: 1%;
-    height: 50vh;
-    width: 50vh;
-  }
 }
 
-.home-btn {
-  margin-top: 1%;
-  margin-left: 16%;
-  a{
+.end-question {
+  font-family: 'Henny Penny', cursive;
+  font-size: 80px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.end-btn {
+  min-width: 34%;
+  margin-left: 12%;
+  a {
     background-color:#151a4acf;
     border-radius: 30px;
-    width: 400px;
+    width: 396px;
     height: 130px;
     display: flex;
     text-decoration: none;
@@ -39,7 +47,7 @@
   }
 }
 
-.homepage-btns {
+.endpage-btns {
   display: flex;
   flex-wrap: wrap;
 }
