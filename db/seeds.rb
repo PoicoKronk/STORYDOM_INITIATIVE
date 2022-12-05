@@ -107,15 +107,15 @@ character = Character.create(
 )
 
 
-character = Character.create(
-  name: 'Witch',
-  typ: 'Creature',
-  gender: 'She',
-  pronoun: 'her',
-  possessive: 'her',
-  good: true,
-  photo: 'Witch.png'
-)
+# character = Character.create(
+#   name: 'Witch',
+#   typ: 'Creature',
+#   gender: 'She',
+#   pronoun: 'her',
+#   possessive: 'her',
+#   good: true,
+#   photo: 'Witch.png'
+# )
 
 
 # character = Character.create(
@@ -139,7 +139,6 @@ character = Character.create(
   photo: 'Fairy.png'
 )
 
-
 character = Character.create(
   name: 'Elf',
   typ: 'Creature',
@@ -149,7 +148,6 @@ character = Character.create(
   good: true,
   photo: 'Elf.png'
 )
-
 
 character = Character.create(
   name: 'Mermaid',

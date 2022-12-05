@@ -11,6 +11,9 @@ class StoriesController < ApplicationController
 
   def new
     @story = Story.new
+    @characters = Character.all
+    @places = Place.all
+    @items = Item.all
   end
 
   def create
