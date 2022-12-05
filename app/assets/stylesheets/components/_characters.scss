@@ -1,4 +1,7 @@
-.human-char{
-  scale: 60%;
-  position: sticky;
+.main_char{
+  scale: 50%;
+  .human-char{
+    position: sticky;
+  }
+
 }
