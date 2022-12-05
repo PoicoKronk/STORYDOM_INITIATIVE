@@ -118,6 +118,7 @@ character = Character.create(
 )
 
 
+
 # character = Character.create(
 #   name: 'Ghost',
 #   typ: 'Creature',
@@ -139,7 +140,6 @@ character = Character.create(
   photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/fairy_a2kbfx.png'
 )
 
-
 character = Character.create(
   name: 'Elf',
   typ: 'Creature',
@@ -149,7 +149,6 @@ character = Character.create(
   good: true,
   photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/elf_duhle8.png'
 )
-
 
 character = Character.create(
   name: 'Mermaid',
