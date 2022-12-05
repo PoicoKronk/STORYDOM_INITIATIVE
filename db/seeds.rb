@@ -26,7 +26,7 @@ character = Character.create(
   pronoun: 'him',
   possessive: 'his',
   good: true,
-  photo: 'Prince.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979465/Storydom/prince_gyezd9.png'
 )
 
 
@@ -37,7 +37,7 @@ character = Character.create(
   pronoun: 'her',
   possessive: 'her',
   good: true,
-  photo: 'Princess.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/adventurer_rhhoe5.png'
 )
 
 
@@ -48,7 +48,7 @@ character = Character.create(
   pronoun: 'him',
   possessive: 'his',
   good: true,
-  photo: 'Knight.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/knight_sotcxf.png'
 )
 
 
@@ -59,7 +59,7 @@ character = Character.create(
   pronoun: 'He',
   possessive: 'his',
   good: true,
-  photo: 'Hunter.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/hunter_n3hfvm.png'
 )
 
 
@@ -70,7 +70,7 @@ character = Character.create(
   pronoun: 'her',
   possessive: 'her',
   good: true,
-  photo: 'Adventurer.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/adventurer_rhhoe5.png'
 )
 
 
@@ -81,7 +81,7 @@ character = Character.create(
   pronoun: 'him',
   possessive: 'his',
   good: true,
-  photo: 'Pirate.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670239976/Storydom/pirate2_batrpq.png'
 )
 
 
@@ -92,7 +92,7 @@ character = Character.create(
   pronoun: 'him',
   possessive: 'his',
   good: true,
-  photo: 'Cowboy.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979465/Storydom/cowboy_ejfikj.png'
 )
 
 
@@ -103,7 +103,7 @@ character = Character.create(
   pronoun: 'it',
   possessive: 'its',
   good: true,
-  photo: 'Dragon.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979540/Storydom/dragon_p95fcb.png'
 )
 
 
@@ -114,7 +114,7 @@ character = Character.create(
   pronoun: 'her',
   possessive: 'her',
   good: true,
-  photo: 'Witch.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670240609/Storydom/witch_ggm8xf.png'
 )
 
 
@@ -136,7 +136,7 @@ character = Character.create(
   pronoun: 'her',
   possessive: 'her',
   good: true,
-  photo: 'Fairy.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/fairy_a2kbfx.png'
 )
 
 
@@ -147,7 +147,7 @@ character = Character.create(
   pronoun: 'him',
   possessive: 'his',
   good: true,
-  photo: 'Elf.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/elf_duhle8.png'
 )
 
 
@@ -158,7 +158,7 @@ character = Character.create(
   pronoun: 'her',
   possessive: 'her',
   good: true,
-  photo: 'Mermaid.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/mermaid_vhzzeg.png'
 )
 
 
