@@ -1,17 +1,21 @@
-
 <div class="new-story">
-  <%= simple_form_for @story do |f| %>
-  <div>
-    <%= f.association :character, collection: Character::CHARACTER_NAMES, class:"story-btn" %>
+  <div class="struct">
+    <%= simple_form_for @story do |f| %>
+        <%= f.association :character, collection: Character::CHARACTER_NAMES, class:"story-btn" %>
+    <div class="stickers-item">
+        <%= f.association :item, collection: Item::ITEM_NAMES %>
+    </div>
+      <div class="stickers-place">
+        <%= f.association :place, collection: Place::PLACE_NAMES %>
+      </div>
+        <p class="next"><%= f.submit 'Start', class:"btn btn-outline-danger" %></p>
+        <% end %>
+      <div class="cards-index">
+        <% @characters.each do |character| %>
+        <div class="character-card">
+          <%= image_tag(character.photo , class:"stickers-character") %>
+        </div>
+        <% end %>
+      </div>
   </div>
-  <div>
-    <%= f.association :item, collection: Item::ITEM_NAMES %>
-  </div>
-  <div>
-    <%= f.association :place, collection: Place::PLACE_NAMES %>
-  </div>
-    <p class="start"><%= f.submit 'Start', class:"btn btn-outline-danger" %></p>
-    <p class="back"><%= link_to "Back", root_path, class:"btn btn-outline-danger" %></p>
-  <% end %>
-
 </div>
