@@ -1,4 +1,4 @@
-<div class="new">
+<div class="new-story">
   <%= simple_form_for @story do |f| %>
   <div>
     <%= f.association :character, collection: Character::CHARACTER_NAMES, class:"story-btn" %>
@@ -9,6 +9,7 @@
   <div>
     <%= f.association :place, collection: Place::PLACE_NAMES %>
   </div>
-    <p class="next"><%= f.submit 'Start', class:"btn btn-outline-danger" %></p>
+    <p class="start"><%= f.submit 'Start', class:"btn btn-outline-danger" %></p>
+    <p class="back"><%= link_to "Back", root_path, class:"btn btn-outline-danger" %></p>
   <% end %>
 </div>
