@@ -1,0 +1,24 @@
+<div class="index">
+  <div class="index-title">
+    <p> Stories Saved </p>
+  </div>
+
+  <div class= "story-index">
+
+    <div class="container" >
+      <% @stories.each do |story| %>
+        <div class="popover">
+          <button class="popover__trigger">
+          <p class="story-title"> <%= story.title %> </p>
+          </button>
+          <ul class="popover__menu">
+            <li class="popover__menu-item"> <%= story.character.photo %> </li>
+            <li class="popover__menu-item"> <%= link_to "Read", page1_story_path(story) %> </li>
+          </ul>
+        <p class="x"><%= link_to "X", story_path(story), data: {turbo_method: :delete}, class: "btn btn-outline-danger" %></p>
+        </div>
+      <% end %>
+      <p class="back"><%= link_to "Back", root_path, class:"btn btn-outline-danger" %></p>
+    </div>
+  </div>
+</div>
