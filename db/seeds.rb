@@ -99,7 +99,7 @@ character = Character.create(
 character = Character.create(
   name: 'Dragon',
   typ: 'Creature',
-  gender: 'Male',
+  gender: 'It',
   pronoun: 'it',
   possessive: 'its',
   good: true,
