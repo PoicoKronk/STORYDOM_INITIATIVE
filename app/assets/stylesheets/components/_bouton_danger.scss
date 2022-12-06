@@ -1,0 +1,10 @@
+.btn-save-new {
+  color: #fff;
+  background-color: #151a4acf;
+  border-color: #151a4acf;
+  &:hover {
+    color: #151a4acf;
+    border-color: #151a4acf;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
