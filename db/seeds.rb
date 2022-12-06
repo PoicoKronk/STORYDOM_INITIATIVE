@@ -103,7 +103,7 @@ character = Character.create(
   pronoun: 'it',
   possessive: 'its',
   good: true,
-  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979540/Storydom/dragon_p95fcb.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670327665/Storydom/dragon_p95fcb.png'
 )
 
 
