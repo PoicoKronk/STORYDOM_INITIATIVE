@@ -3,22 +3,27 @@
     <p> Stories Saved </p>
   </div>
 
-  <div class= "story-index">
-
-    <div class="container" >
+      <div class="saved-stories-container" >
       <% @stories.each do |story| %>
         <div class="popover">
           <button class="popover__trigger">
-          <p class="story-title"> <%= story.title %> </p>
+          <p class="story-title"><%= story.title %></p>
           </button>
           <ul class="popover__menu">
-            <li class="popover__menu-item"> <%= story.character.photo %> </li>
+            <div class="character-card">
+              <li class="popover__menu-item"> <%= image_tag story.character.photo, class: "stickers-character" %></li>
+            </div>
+            <div class="stickers-place">
+              <li class="popover__menu-item"> <%= image_tag story.item.photo %></li>
+            </div>
+            <div class="stickers-place">
+              <li class="popover__menu-item"> <%= image_tag story.place.photo %></li>
+            </div>
             <li class="popover__menu-item"> <%= link_to "Read", page1_story_path(story) %> </li>
           </ul>
-        <p class="x"><%= link_to "X", story_path(story), data: {turbo_method: :delete}, class: "btn btn-outline-danger" %></p>
+          <%= link_to "X", story_path(story), data: {turbo_method: :delete}, class: "btn-save-new x" %>
         </div>
-      <% end %>
-      <p class="back"><%= link_to "Back", root_path, class:"btn-save-new" %></p>
-    </div>
-  </div>
+          <% end %>
+      </div>
+  <p class="back"><%= link_to "Back", root_path, class:"btn-save-new" %></p>
 </div>
