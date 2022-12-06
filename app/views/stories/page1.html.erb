@@ -1,7 +1,6 @@
 <div class="page-global">
-
-  <div class="page-char-stickerss">
-    <%= image_tag "#{@story.character.photo}", class: "human-char" %>
+  <div class="page-char-stickers">
+    <%= image_tag "#{@story.character.photo}", class: "#{@story.character.typ.downcase}-char" %>
   </div>
 </div>
 
