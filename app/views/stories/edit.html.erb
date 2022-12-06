@@ -1,6 +1,7 @@
 <div class="edit">
-  <%= simple_form_for @story do |f| %>
+  <%= simple_form_for @story do |f|%>
     <%= f.input :title %>
-    <p class="save"><%= f.submit 'Save', class:"btn btn-outline-danger" %></p>
+    <div class="btn-form-container"><%= f.submit 'Save', class:"btn-save-new save" %>
+    </div>
   <% end %>
 </div>

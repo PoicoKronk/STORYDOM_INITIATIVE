@@ -1,6 +1,6 @@
 <div class="new-story">
   <div class="struct">
-    <%= simple_form_for @story do |f| %>
+    <%= simple_form_for @story, html:{class:"new-story-form"} do |f| %>
         <%= f.association :character, collection: Character::CHARACTER_NAMES, class:"story-btn" %>
     <div class="stickers-item">
         <%= f.association :item, collection: Item::ITEM_NAMES %>
@@ -8,7 +8,7 @@
       <div class="stickers-place">
         <%= f.association :place, collection: Place::PLACE_NAMES %>
       </div>
-        <p class="next"><%= f.submit 'Start', class:"btn btn-outline-danger" %></p>
+        <p class="next"><%= f.submit 'Start', class:"btn-save-new" %></p>
         <% end %>
       <div class="cards-index">
         <% @characters.each do |character| %>
