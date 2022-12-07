@@ -3,6 +3,8 @@
   background-image: url(https://static.vecteezy.com/system/resources/previews/001/846/790/non_2x/blue-watercolor-night-sky-background-free-vector.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   height: 100vh;
 }
 
@@ -26,7 +28,7 @@
     height: 130px;
     display: flex;
     text-decoration: none;
-    color: #FFFA7A;
+    color: $old-page;
     font-family: 'Henny Penny', cursive;
     justify-content: space-around;
     align-content: center;

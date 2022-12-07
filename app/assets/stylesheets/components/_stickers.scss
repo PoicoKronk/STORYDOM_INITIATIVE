@@ -9,8 +9,19 @@
   background-color: #151a4a7b;
 }
 
+.stickers-little {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $old-page;
+  border-radius: 50%;
+  background-color: #151a4a7b;
+}
+
 .active-character {
-  border: 4px solid #FFFA7A;
+  border: 4px solid $old-page;
 }
 
 .active-item {
@@ -19,7 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #FFFA7A;
+  border: 4px solid $old-page;
   border-radius: 50%;
   background-color: #151a4a7b;
 }
@@ -30,7 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #FFFA7A;
+  border: 4px solid $old-page;
   border-radius: 50%;
   background-color: #151a4a7b;
 }
@@ -50,6 +61,26 @@
 .img-place {
   height: 125px;
   width: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: flex;
+}
+
+.img-little-character {
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.img-little-item {
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.img-little-place {
+  height: 50px;
+  width: 50px;
   object-fit: cover;
   border-radius: 50%;
   display: flex;

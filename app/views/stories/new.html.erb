@@ -1,11 +1,11 @@
 <div class="new-story">
-  <%= simple_form_for @story do |f| %>
+  <%= simple_form_for @story, html: {class:"new-form"} do |f| %>
     <%= f.input :character, class:"d-none" %>
     <%= f.input :item, class:"d-none" %>
     <%= f.input :place, class:"d-none" %>
 
-    <p class="start"><%= f.submit 'Start', class:"btn btn-outline-danger" %></p>
-    <p class="back"><%= link_to "Back", root_path, class:"btn btn-outline-danger" %></p>
+    <p class="start"><%= f.submit 'Start', class:"btn btn-danger" %></p>
+    <p class="back"><%= link_to "Back", root_path, class:"btn btn-danger" %></p>
   <% end %>
 
   <div class="new-tabs">
