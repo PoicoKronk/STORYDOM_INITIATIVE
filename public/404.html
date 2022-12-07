@@ -12,6 +12,34 @@
     margin: 0;
   }
 
+  .home-error-btn {
+  margin-top: 1%;
+  margin-left: 16%;
+    background-color:#151a4acf;
+    border-radius: 30px;
+    width: 400px;
+    height: 130px;
+    display: flex;
+    text-decoration: none;
+    color: #FFFA7A;
+    font-family: 'Henny Penny', cursive;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 89px;
+    margin-bottom: 10%;
+  }
+
+  .index {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/001/846/790/non_2x/blue-watercolor-night-sky-background-free-vector.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  }
+
   .rails-default-error-page div.dialog {
     width: 95%;
     max-width: 33em;
@@ -51,15 +79,24 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+  .stickers-character{
+height: 126px;
+left: 80px;
+top: 42px;
+border-radius: 20px;
+display: flex;
+}
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="index">
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
+  <div class="stickers-character">
+    <h1>The page you were looking for doesn't exist.</h1>
     <div>
-      <h1>The page you were looking for doesn't exist.</h1>
+      <div class="home-error-btn">
       <p>You may have mistyped the address or the page may have moved.</p>
+      </div>
     </div>
     <p>If you are the application owner check the logs for more information.</p>
   </div>
