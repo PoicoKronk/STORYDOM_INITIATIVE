@@ -181,3 +181,9 @@ Place.create(
   typ: 'Nature',
   photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670250974/Storydom/forest_xmgflb.jpg'
 )
+
+Place.create(
+  name: 'Volcano',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670429338/Storydom/Volcano_bqkwio.png'
+)
