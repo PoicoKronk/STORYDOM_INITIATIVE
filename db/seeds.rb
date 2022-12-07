@@ -37,7 +37,7 @@ character = Character.create(
   pronoun: 'her',
   possessive: 'her',
   good: true,
-  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/adventurer_rhhoe5.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/princess_uabap1.png'
 )
 
 
