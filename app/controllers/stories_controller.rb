@@ -141,8 +141,8 @@ class StoriesController < ApplicationController
       content = contents[story.number_index]
     when "Creature"
       contents = [
-        "When the #{story.character.name} realized the #{@character2.name}  was after its treasure, the #{story.character.name} was ready to fight back.",
-        "When the #{story.character.name} realized the #{@character2.name}  was after its treasure, the #{story.character.name} was ready to fight back."
+        "When the #{story.character.name} realized the #{@character2.name}  was after #{story.character.possessive} treasure, the #{story.character.name} was ready to fight back.",
+        "When the #{story.character.name} realized the #{@character2.name}  was after#{story.character.possessive} treasure, the #{story.character.name} was ready to fight back."
       ]
       content = contents[story.number_index]
     end
@@ -175,7 +175,7 @@ class StoriesController < ApplicationController
       content = contents[story.number_index]
     when "Creature"
       contents = [
-        "The #{story.character.name} wanted to end it. It spitted out fire on its enemy leaving a roasted #{@character2.name} .",
+        "The #{story.character.name} wanted to end it. It spitted out fire on #{story.character.possessive} enemy leaving a roasted #{@character2.name} .",
         "Both the #{story.character.name} and the #{@character2.name}  were exhausted. They finally fell asleep."
       ]
       content = contents[story.number_index]
