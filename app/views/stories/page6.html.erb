@@ -9,7 +9,7 @@
 <div class="page-text">
   <p class="text"><%= @story_fin %></p>
 
-  <p class="next"><%= link_to "End", end_story_path(@story), class:"btn btn-outline-danger" %></p>
+  <p class="next"><%= link_to "End", end_story_path(@story, character2: @character2), class:"btn btn-outline-danger" %></p>
 
-  <p class="previous"><%= link_to "Previous", page5_story_path(@story), class:"btn btn-outline-danger" %></p>
+  <p class="previous"><%= link_to "Previous", page5_story_path(@story, character2: @character2), class:"btn btn-outline-danger" %></p>
 </div>

@@ -7,7 +7,7 @@
 <div class="page-text">
   <p class="text"><%= @story_trig %></p>
 
-  <p class="next"><%= link_to "Next", page3_story_path(@story), class:"btn btn-outline-danger" %></p>
+  <p class="next"><%= link_to "Next", page3_story_path(@story, character2: @character2), class:"btn btn-outline-danger" %></p>
 
-  <p class="previous"><%= link_to "Previous", page1_story_path(@story), class:"btn btn-outline-danger" %></p>
+  <p class="previous"><%= link_to "Previous", page1_story_path(@story, character2: @character2), class:"btn btn-outline-danger" %></p>
 </div>
