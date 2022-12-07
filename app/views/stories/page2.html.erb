@@ -1,9 +1,14 @@
-<div class="page-2">
+<% if @story.character.typ == "Human" %>
+  <div class="page-2-<%="#{@story.place.name}"%>">
+<% else %>
+  <div class="page-1-<%="#{@story.place.name}"%>">
+<% end %>
 
   <div class="page-char-stickers">
     <%= image_tag "#{@story.character.photo}", class: "human-char" %>
     <%= image_tag "#{@character2.photo}", class: "#{@story.character.typ.downcase}-char" %>
   </div>
+
 </div>
 
 <div class="page-text">
