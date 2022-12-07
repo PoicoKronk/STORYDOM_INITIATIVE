@@ -17,11 +17,11 @@ class StoriesController < ApplicationController
   end
 
   def create
-    @story = Story.new(story_params)
+    @story = Story.new
     @story.user_id = current_user.id
-    @story.character_id = Character.find_by(name: params[:story][:character_id]).id
-    @story.item_id = Item.find_by(name: params[:story][:item_id]).id
-    @story.place_id = Place.find_by(name: params[:story][:place_id]).id
+    @story.character_id = params[:story][:character].to_i
+    @story.item_id = params[:story][:item].to_i
+    @story.place_id = params[:story][:place].to_i
 
     @story.number_index = rand(0..1)
 
