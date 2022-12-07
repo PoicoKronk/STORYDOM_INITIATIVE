@@ -2,6 +2,8 @@
   background-image: url(https://static.vecteezy.com/system/resources/previews/001/846/790/non_2x/blue-watercolor-night-sky-background-free-vector.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   height: 100vh;
 }
 
@@ -16,10 +18,10 @@
 }
 
 .story-title {
-    font-family: 'Henny Penny', cursive;
+    font-family: 'Uncial Antiqua', cursive;
     font-size: 30px;
     text-decoration: none;
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
 }
@@ -31,4 +33,29 @@
 $radius: 4px;
 $accent: #49c5b6;
 
+.back {
+  font-family: 'Uncial Antiqua', cursive;
+  display: block;
+  float: left;
+  margin-left: 1%;
+  margin-top: 1%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 
+.btn-x {
+  font-family: 'Uncial Antiqua', cursive;
+  color: #fff;
+  background-color: #151a4acf;
+  display: block;
+  border-color: #151a4acf;
+  text-decoration: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  &:hover {
+    color: $old-page;
+  }
+}

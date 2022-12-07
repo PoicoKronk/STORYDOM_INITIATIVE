@@ -1,4 +1,39 @@
-.page-global {
+.page-1 {
+  background-image: asset-url("Mountain.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+.page-2 {
+  background-image: asset-url("Mountain.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+.page-3 {
+  background-image: asset-url("Mountain.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+.page-4 {
+  background-image: asset-url("Mountain.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+.page-5 {
+  background-image: asset-url("Mountain.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+.page-6 {
   background-image: asset-url("Mountain.png");
   background-size: cover;
   background-position: center;
@@ -12,11 +47,13 @@
   justify-content: center;
   align-items: center;
   position: relative;
+
   .text {
     font-family: 'Uncial Antiqua', cursive;
     font-size: 200%;
     text-align: center;
   }
+
   .next {
     font-family: 'Uncial Antiqua', cursive;
     display: block;

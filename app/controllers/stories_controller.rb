@@ -4,6 +4,8 @@ class StoriesController < ApplicationController
 
   def index
     @stories = Story.all
+    stories_no_title = Story.where(title: nil)
+    stories_no_title.each { |story| story.delete }
   end
 
   def show
@@ -64,36 +66,42 @@ class StoriesController < ApplicationController
   end
 
   def page1
-    if @story.character.typ == "Human"
-      @character2 =  Character.where(typ: "Creature").sample
-    elsif @story.character.typ == "Creature"
-      @character2 = Character.where(typ: "Human").sample
+    if @story.character2_id == nil
+      if @story.character.typ == "Human"
+        @character2 = Character.where(typ: "Creature").sample
+      elsif @story.character.typ == "Creature"
+        @character2 = Character.where(typ: "Human").sample
+      end
+      @story.character2_id = @character2.id
+      @story.save
+    else
+      @character2 = Character.find(@story.character2_id)
     end
     @story_init = self.story_initial(@story)
   end
 
   def page2
-    @character2 = Character.find(params[:character2].to_i)
+    @character2 = Character.find(@story.character2_id)
     @story_trig = self.story_trigger(@story)
   end
 
   def page3
-    @character2 = Character.find(params[:character2].to_i)
+    @character2 = Character.find(@story.character2_id)
     @story_adv1 = self.story_adventure1(@story)
   end
 
   def page4
-    @character2 = Character.find(params[:character2].to_i)
+    @character2 = Character.find(@story.character2_id)
     @story_adv2 = self.story_adventure2(@story)
   end
 
   def page5
-    @character2 = Character.find(params[:character2].to_i)
+    @character2 = Character.find(@story.character2_id)
     @story_out = self.story_outcome(@story)
   end
 
   def page6
-    @character2 = Character.find(params[:character2].to_i)
+    @character2 = Character.find(@story.character2_id)
     @story_fin = self.story_final(@story)
   end
 
