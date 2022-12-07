@@ -1,11 +1,16 @@
-<div class="page-global">
+<% if @story.character.typ == "Human" %>
+  <div class="page-1-<%="#{@story.place.name}"%>">
+<% else %>
+  <div class="page-2-<%="#{@story.place.name}"%>">
+<% end %>
+
   <div class="page-char-stickers">
     <%= image_tag "#{@story.character.photo}", class: "#{@story.character.typ.downcase}-char" %>
-    <%= image_tag "#{@character2.photo}", class: "#{@story.character.typ.downcase}-char" %>
   </div>
+
 </div>
 
 <div class="page-text">
   <p class="text"><%= @story_init %></p>
-  <p class="next"><%= link_to "Next", page2_story_path(@story, character2: @character2), class:"btn btn-outline-danger" %></p>
+  <p class="next"><%= link_to "Next", page2_story_path(@story, character2: @character2), class:"btn btn-danger" %></p>
 </div>

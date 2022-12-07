@@ -15,11 +15,12 @@
 
 .save {
   font-family: 'Uncial Antiqua', cursive;
-  // float: bottom;
-  // justify-content: center;
-  // margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
 }
-.btn-form-container {
+
+.div-save {
   display: flex;
   justify-content: center;
   margin-top: 20px;

@@ -6,16 +6,17 @@
 .popover__trigger {
   text-decoration: none;
   margin-bottom: 3%;
-  padding-right: 50px;
+  padding-right: 10px;
+  background-color: $midnight-blue;
+  color: white;
+
   .story-title {
     margin-top: 10px;
     &:hover {
-      color: rgba(0, 0, 0, 0.619);
+      color: $old-page;
     }
   }
 }
-
-
 
 .popover {
 	display: flex;
@@ -25,11 +26,9 @@
   border: none;
 }
 
-
 .popover__menu {
+  border: solid 3px $midnight-blue;
 	border-radius: $radius;
-	border-top: 2px solid $accent;
-	background: #fff;
 	list-style-type: none;
 	margin: 8px 0;
 	min-width: 100%;
@@ -47,24 +46,14 @@
 	transform-origin: top left;
 	display: block;
 	opacity: 0;
-
-	&:after {
-		bottom: 100%;
-		left: 0.5rem;
-		border: solid transparent;
-		content: " ";
-		height: 0;
-		width: 0;
-		position: absolute;
-		pointer-events: none;
-		border-color: rgba(255, 255, 255, 0);
-		border-bottom-color: $accent;
-		border-width: 7px;
-	}
 }
 
-.popover__menu-item {
+.popover__menu-thing {
+  font-family: 'Uncial Antiqua', cursive;
 	white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
 	button {
 		border: 0;
 		border-radius: 0;
@@ -87,23 +76,4 @@ button {
 	border-color: #ccc;
 	border-radius: $radius;
 	cursor: pointer;
-}
-
-.x {
-  font-family: 'Uncial Antiqua', cursive;
-  display: block;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-
-.back {
-  font-family: 'Uncial Antiqua', cursive;
-  display: block;
-  float: left;
-  margin-left: 1%;
-  margin-top: 1%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }

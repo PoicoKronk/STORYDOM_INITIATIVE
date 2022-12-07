@@ -5,6 +5,7 @@ class CreateCharacters < ActiveRecord::Migration[7.0]
       t.string :typ
       t.string :gender
       t.boolean :good
+      t.string :photo
 
       t.timestamps
     end

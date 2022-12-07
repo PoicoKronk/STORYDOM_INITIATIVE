@@ -1,15 +1,16 @@
-<div class="page-global">
+<div class="page-5-<%="#{@story.place.name}"%>">
 
-    <div class="page-char-stickers">
+  <div class="page-char-stickers">
     <%= image_tag "#{@story.character.photo}", class: "human-char" %>
-    </div>
+    <%= image_tag "#{@character2.photo}", class: "#{@story.character.typ.downcase}-char" %>
+  </div>
 
 </div>
 
 <div class="page-text">
   <p class="text"><%= @story_out %></p>
 
-  <p class="next"><%= link_to "Next", page6_story_path(@story, character2: @character2), class:"btn btn-outline-danger" %></p>
+  <p class="next"><%= link_to "Next", page6_story_path(@story, character2: @character2), class:"btn btn-danger" %></p>
 
-  <p class="previous"><%= link_to "Previous", page4_story_path(@story, character2: @character2), class:"btn btn-outline-danger" %></p>
+  <p class="previous"><%= link_to "Previous", page4_story_path(@story, character2: @character2), class:"btn btn-danger" %></p>
 </div>

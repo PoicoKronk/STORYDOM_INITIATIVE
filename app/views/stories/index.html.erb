@@ -1,29 +1,55 @@
 <div class="index">
   <div class="index-title">
-    <p> Stories Saved </p>
+    <p> Saved Stories </p>
   </div>
 
-      <div class="saved-stories-container" >
-      <% @stories.each do |story| %>
-        <div class="popover">
-          <button class="popover__trigger">
+  <div class="saved-stories-container" >
+    <% @stories.each do |story| %>
+      <div class="popover" data-controller="saved-stories">
+        <button class="popover__trigger">
           <p class="story-title"><%= story.title %></p>
-          </button>
-          <ul class="popover__menu">
-            <div class="character-card">
-              <li class="popover__menu-item"> <%= image_tag story.character.photo, class: "stickers-character" %></li>
-            </div>
-            <div class="stickers-place">
-              <li class="popover__menu-item"> <%= image_tag story.item.photo %></li>
-            </div>
-            <div class="stickers-place">
-              <li class="popover__menu-item"> <%= image_tag story.place.photo %></li>
-            </div>
-            <li class="popover__menu-item"> <%= link_to "Read", page1_story_path(story) %> </li>
-          </ul>
-          <%= link_to "X", story_path(story), data: {turbo_method: :delete}, class: "btn-save-new x" %>
-        </div>
-          <% end %>
+        </button>
+
+        <ul class="popover__menu">
+
+          <div class="cards-character">
+            <li class="popover__menu-thing">
+              <div class="stickers-little stickers-character">
+                <%= image_tag story.character.photo, class: "img-little-character" %>
+              </div>
+            </li>
+          </div>
+
+          <div class="cards-character">
+            <li class="popover__menu-thing">
+              <div class="stickers-little stickers-character">
+                <%= image_tag Character.find(story.character2_id).photo, class: "img-little-character" %>
+              </div>
+            </li>
+          </div>
+
+          <div class="cards-place">
+            <li class="popover__menu-thing">
+              <div class="stickers-little stickers-item">
+                <%= image_tag story.item.photo, class: "img-little-item" %>
+            </li>
+          </div>
+
+          <div class="cards-place">
+            <li class="popover__menu-thing">
+              <div class="stickers-little stickers-place">
+                <%= image_tag story.place.photo, class: "img-little-place" %>
+              </div>
+            </li>
+          </div>
+
+          <li class="popover__menu-thing"> <%= link_to "Read", page1_story_path(story), class:"btn btn-danger" %> </li>
+        </ul>
+
+        <%= link_to "X", story_path(story), method: :delete, class: "btn-x" %>
       </div>
-  <p class="back"><%= link_to "Back", root_path, class:"btn-save-new" %></p>
+    <% end %>
+  </div>
+
+  <p class="back"><%= link_to "Back", root_path, class:"btn btn-danger" %></p>
 </div>
