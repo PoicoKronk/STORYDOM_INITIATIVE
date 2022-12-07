@@ -1,7 +1,9 @@
 <div class="page-2">
+
   <div class="page-char-stickers">
-      <%= image_tag "#{@story.character.photo}", class: "human-char" %>
-    </div>
+    <%= image_tag "#{@story.character.photo}", class: "human-char" %>
+    <%= image_tag "#{@character2.photo}", class: "#{@story.character.typ.downcase}-char" %>
+  </div>
 </div>
 
 <div class="page-text">
