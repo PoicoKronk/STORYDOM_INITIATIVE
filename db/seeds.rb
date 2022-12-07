@@ -121,7 +121,7 @@ Character.create(
 
 Character.create(
   name: 'Elf',
-  typ: 'Creature',
+  typ: 'Half-human',
   gender: 'He',
   pronoun: 'him',
   possessive: 'his',
@@ -131,7 +131,7 @@ Character.create(
 
 Character.create(
   name: 'Mermaid',
-  typ: 'Creature',
+  typ: 'Half-human',
   gender: 'She',
   pronoun: 'her',
   possessive: 'her',
