@@ -1,5 +1,5 @@
 <div class="new-story">
-  <%= simple_form_for @story, html: { class: "new-form"} do |f| %>
+  <%= simple_form_for @story do |f| %>
     <%= f.input :character, class:"d-none" %>
     <%= f.input :item, class:"d-none" %>
     <%= f.input :place, class:"d-none" %>

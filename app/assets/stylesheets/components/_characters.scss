@@ -1,7 +1,13 @@
-.main_char{
+.human-char{
   scale: 50%;
-  .human-char{
-    position: sticky;
+  position: relative;
+  bottom: -50px;
+  left: 0;
   }
 
-}
+.creature-char{
+  scale: 50%;
+  position: relative;
+  bottom: 75px;
+  left: 0;
+   }
