@@ -59,11 +59,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_134230) do
     t.string "typ"
     t.string "gender"
     t.boolean "good"
-    t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "pronoun"
     t.string "possessive"
+    t.text "photo"
   end
 
   create_table "finals", force: :cascade do |t|

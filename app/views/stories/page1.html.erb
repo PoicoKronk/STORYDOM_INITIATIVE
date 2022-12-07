@@ -1,8 +1,4 @@
-<% if @story.place.includes("Mountain") %>
-  <div class="page-1"><%= PLACES.sample %>
-<% else %>
-  <div class="page-7">
-<% end %>
+
 
   <div class="page-char-stickers">
     <%= image_tag "#{@story.character.photo}", class: "#{@story.character.typ.downcase}-char" %>

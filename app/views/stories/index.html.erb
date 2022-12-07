@@ -5,7 +5,7 @@
 
   <div class="saved-stories-container" >
     <% @stories.each do |story| %>
-      <div class="popover">
+      <div class="popover" data-controller="saved-stories">
         <button class="popover__trigger">
           <p class="story-title"><%= story.title %></p>
         </button>
@@ -46,7 +46,7 @@
           <li class="popover__menu-thing"> <%= link_to "Read", page1_story_path(story), class:"btn btn-danger" %> </li>
         </ul>
 
-        <%= link_to "X", story_path(story), data: {turbo_method: :delete}, class: "btn-x" %>
+        <%= link_to "X", story_path(story), method: :delete, class: "btn-x" %>
       </div>
     <% end %>
   </div>
