@@ -187,3 +187,36 @@ Place.create(
   typ: 'Nature',
   photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670429338/Storydom/Volcano_bqkwio.png'
 )
+
+Place.create(
+  name: 'Castle',
+  typ: 'Building',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492522/Storydom/Castle_nkgvn2.png'
+)
+
+Place.create(
+  name: 'Jungle',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492443/Storydom/Jungle_trx5bd.png'
+)
+
+Place.create(
+  name: 'Boat',
+  typ: 'Vehicle',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492442/Storydom/Boat_final_srfrnc.png'
+)
+Place.create(
+  name: 'Cavern',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492443/Storydom/Cavern_lsmpmy.png'
+)
+Place.create(
+  name: 'Farm',
+  typ: 'Building',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492443/Storydom/Farm_vjzbvy.png'
+)
+Place.create(
+  name: 'Desert',
+  typ: 'Building',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492723/Storydom/Desert_gaoifg.png'
+)
