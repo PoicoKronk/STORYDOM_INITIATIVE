@@ -1,7 +1,8 @@
 <div class="page-6-<%="#{@story.place.name}"%>">
 
   <div class="page-char-stickers">
-    <%= image_tag "#{@story.character.photo}", class: "human-char" %>
+    <%= image_tag "#{@story.character.photo}", class: "#{@story.character.typ.downcase}-char-page6" %>
+    <%= image_tag "#{@character2.photo}", class: "#{@character2.typ.downcase}-char-page6" %>
   </div>
 
 </div>

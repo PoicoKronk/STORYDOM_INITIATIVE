@@ -143,8 +143,8 @@ class StoriesController < ApplicationController
     case story.character.typ
     when "Human"
       contents = [
-        "When the #{story.character.name} realized, the #{@character2.name}  was protecting a #{story.item.name} on the top of the #{story.place.name}.",
-        "When the #{story.character.name} realized, the #{@character2.name}  was protecting a #{story.item.name} on the top of the #{story.place.name}."
+        "When the #{story.character.name} realized, the #{@character2.name}  was protecting a #{story.item.name} at the top of the #{story.place.name}.",
+        "When the #{story.character.name} realized, the #{@character2.name}  was protecting a #{story.item.name} at the top of the #{story.place.name}."
       ]
       content = contents[story.number_index]
     when "Creature"
@@ -178,7 +178,7 @@ class StoriesController < ApplicationController
     when "Human"
       contents = [
         "The #{@character2.name}  defeated, the #{story.character.name} became #{story.character.possessive} master.",
-        "The #{@character2.name}  defeated, the #{story.character.name} came back in #{story.character.possessive} kingdom."
+        "The #{@character2.name}  defeated, the #{story.character.name} came back to #{story.character.possessive} kingdom."
       ]
       content = contents[story.number_index]
     when "Creature"
