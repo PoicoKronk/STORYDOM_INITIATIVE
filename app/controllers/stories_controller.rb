@@ -25,8 +25,6 @@ class StoriesController < ApplicationController
     @story.item_id = params[:story][:item].to_i
     @story.place_id = params[:story][:place].to_i
 
-
-
     @story.number_index = rand(0..1)
     if @story.save
       redirect_to page1_story_path(@story, @character2)
@@ -55,6 +53,8 @@ class StoriesController < ApplicationController
     redirect_to stories_path
   end
 
+  def settings
+  end
   # private
 
   def set_story
@@ -149,8 +149,8 @@ class StoriesController < ApplicationController
       content = contents[story.number_index]
     when "Creature"
       contents = [
-        "When the #{story.character.name} realized the #{@character2.name}  was after #{story.character.possessive} treasure, the #{story.character.name} was ready to fight back.",
-        "When the #{story.character.name} realized the #{@character2.name}  was after#{story.character.possessive} treasure, the #{story.character.name} was ready to fight back."
+        "When the #{story.character.name} realized the #{@character2.name} was after #{story.character.possessive} treasure, the #{story.character.name} was ready to fight back.",
+        "When the #{story.character.name} realized the #{@character2.name} was after#{story.character.possessive} treasure, the #{story.character.name} was ready to fight back."
       ]
       content = contents[story.number_index]
     end
@@ -160,8 +160,8 @@ class StoriesController < ApplicationController
     case story.character.typ
     when "Human"
       contents = [
-        "The #{story.character.name} bravely climbed this one and grabbed the #{story.item.name} to fight the #{@character2.name} .",
-        "The #{story.character.name} bravely climbed this one and grabbed the #{story.item.name} to fight the #{@character2.name} ."
+        "The #{story.character.name} bravely climbed this one and grabbed the #{story.item.name} to fight the #{@character2.name}.",
+        "The #{story.character.name} bravely climbed this one and grabbed the #{story.item.name} to fight the #{@character2.name}."
       ]
       content = contents[story.number_index]
     when "Creature"
@@ -184,7 +184,7 @@ class StoriesController < ApplicationController
     when "Creature"
       contents = [
         "The #{story.character.name} wanted to end it. It spitted out fire on #{story.character.possessive} enemy leaving a roasted #{@character2.name} .",
-        "Both the #{story.character.name} and the #{@character2.name}  were exhausted. They finally fell asleep."
+        "Both the #{story.character.name} and the #{@character2.name} were exhausted. They finally fell asleep."
       ]
       content = contents[story.number_index]
     end
@@ -194,14 +194,14 @@ class StoriesController < ApplicationController
     case story.character.typ
     when "Human"
       contents = [
-        "The #{story.character.name} was happy to have found #{story.character.possessive} #{story.item.name} and made a friend, the dragon through this journey.",
+        "The #{story.character.name} was happy to have found #{story.character.possessive} #{story.item.name} and made a friend, the #{@character2.name} through this journey.",
         "The #{story.character.name} was more powerful with #{story.character.possessive} new #{story.item.name} and was ready to conquer other lands."
       ]
       content = contents[story.number_index]
     when "Creature"
       contents = [
         "The #{story.character.name} had a great meal and continued to wait for a worthy master.",
-        "When the #{story.character.name} and the #{@character2.name}  woke up with the sun, they looked at each other and laughed. A friendship was born."
+        "When the #{story.character.name} and the #{@character2.name} woke up with the sun, they looked at each other and laughed. A friendship was born."
       ]
       content = contents[story.number_index]
     end

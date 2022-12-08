@@ -1,8 +1,12 @@
 .human-char-page1{
   scale: 50%;
   position: relative;
-  bottom: -75px;
-  left: 0;
+  bottom: -100px;
+  -webkit-animation: ease-in;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
   }
 
 .human-char-page2{
@@ -15,8 +19,13 @@
 .human-char-page3{
   scale: 50%;
   position: relative;
-  bottom: -50px;
-  left: 0;
+  bottom: -100px;
+  -webkit-animation: ease-in;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-name: iddle;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
   }
 
 .human-char-page4{
@@ -56,16 +65,20 @@
   -webkit-animation-name: flying;
   -webkit-animation-duration: 7s;
   -webkit-animation-fill-mode: forwards;
+}
 
-  }
-
-
-  .creature-char-page3{
-    scale: 50%;
-    position: relative;
-    bottom: 75px;
-    left: 0;
-  }
+.creature-char-page3{
+  scale: 50%;
+  position: relative;
+  bottom: 125px;
+  left: 65vh;
+  -webkit-animation: ease-in;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-name: hover;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+   }
 
   .creature-char-page4{
     scale: 50%;
@@ -101,3 +114,42 @@
       right: 5vh;
     }
   }
+
+.creature-char-page6{
+  scale: 50%;
+  position: relative;
+  bottom: 75px;
+  left: 0;
+   }
+
+
+@-webkit-keyframes run {
+  0% {
+    transform: translateX(0);
+    }
+  100% {
+      transform: translateX(175%);
+    }
+}
+
+
+@-webkit-keyframes iddle {
+  0% {
+    transform: translateY(0);
+    }
+  100% {
+      transform: translateY(2%);
+    }
+}
+
+
+@-webkit-keyframes hover {
+  0% {
+    transform: translateY(0);
+    transform: translateX(0);
+    }
+  100% {
+      transform: translateY(10%);
+      transform: translateX(60%);
+    }
+}

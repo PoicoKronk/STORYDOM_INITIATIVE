@@ -46,7 +46,8 @@ Character.create(
   pronoun: 'him',
   possessive: 'his',
   good: true,
-  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1669979464/Storydom/knight_sotcxf.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670512331/Storydom/knight_sotcxf.png'
+
 )
 
 Character.create(
@@ -96,7 +97,7 @@ Character.create(
   pronoun: 'it',
   possessive: 'its',
   good: true,
-  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670327665/Storydom/dragon_p95fcb.png'
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670515792/Storydom/dragon_p95fcb.png'
 )
 
 Character.create(
