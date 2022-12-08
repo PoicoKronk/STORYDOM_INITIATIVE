@@ -1,4 +1,5 @@
 export const popover = () => {
+
   const popoverTrigger = document.querySelector('.popover');
 
   if (popoverTrigger) {

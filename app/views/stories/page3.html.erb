@@ -1,4 +1,12 @@
-<div class="page-3-<%="#{@story.place.name}"%>">
+<div class="pages page-3-<%="#{@story.place.name}"%>">
+
+  <div>
+    <% if @story.place.name == "Mountain" %>
+      <canvas id="canvas-snow"></canvas>
+    <% elsif @story.place.name == "Forest" %>
+      <canvas id="canvas-rain"></canvas>
+    <% end %>
+  </div>
 
   <div class="page-char-stickers">
     <%= image_tag "#{@story.character.photo}", class: "human-char" %>

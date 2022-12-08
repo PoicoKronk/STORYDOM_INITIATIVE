@@ -42,40 +42,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_134230) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "adventure1s", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "adventure2s", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "typ"
     t.string "gender"
     t.boolean "good"
+    t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "pronoun"
     t.string "possessive"
-    t.text "photo"
-  end
-
-  create_table "finals", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "initials", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -84,12 +60,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_134230) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "photo"
-  end
-
-  create_table "outcomes", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "places", force: :cascade do |t|
@@ -114,12 +84,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_134230) do
     t.index ["item_id"], name: "index_stories_on_item_id"
     t.index ["place_id"], name: "index_stories_on_place_id"
     t.index ["user_id"], name: "index_stories_on_user_id"
-  end
-
-  create_table "triggers", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
