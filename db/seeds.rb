@@ -170,6 +170,32 @@ Item.create(
   photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670250703/Storydom/wand_gvahkr.png'
 )
 
+Item.create(
+  name: 'Mirror',
+  typ: 'Misc',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670498486/Storydom/mirror_snahha.png'
+)
+Item.create(
+  name: 'Fishing rod',
+  typ: 'Weapon',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670498486/Storydom/fishingrod_t50kjz.png'
+)
+Item.create(
+  name: 'Cooking pot',
+  typ: 'Misc',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670498486/Storydom/cookingpot_x9tojs.png'
+)
+Item.create(
+  name: 'Surfing board',
+  typ: 'Sport',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670498486/Storydom/surfboard_cwr2hv.png'
+)
+Item.create(
+  name: 'Magical lamp',
+  typ: 'Misc',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670498486/Storydom/genielamp_ihtsrw.png'
+)
+
 Place.create(
   name: 'Mountain',
   typ: 'Nature',
@@ -186,4 +212,56 @@ Place.create(
   name: 'Volcano',
   typ: 'Nature',
   photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670429338/Storydom/Volcano_bqkwio.png'
+)
+
+Place.create(
+  name: 'Castle',
+  typ: 'Building',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492522/Storydom/Castle_nkgvn2.png'
+)
+
+Place.create(
+  name: 'Jungle',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492443/Storydom/Jungle_trx5bd.png'
+)
+
+Place.create(
+  name: 'Boat',
+  typ: 'Vehicle',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492442/Storydom/Boat_final_srfrnc.png'
+)
+
+Place.create(
+  name: 'Cavern',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492443/Storydom/Cavern_lsmpmy.png'
+)
+
+Place.create(
+  name: 'Farm',
+  typ: 'Building',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492443/Storydom/Farm_vjzbvy.png'
+)
+
+Place.create(
+  name: 'Desert',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670492723/Storydom/Desert_gaoifg.png'
+)
+Place.create(
+  name: 'Beach',
+  typ: 'Nature',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670498917/Storydom/beachlong_yw85ph.png'
+)
+
+Place.create(
+  name: 'Metropolis',
+  typ: 'Urban',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670498917/Storydom/metropolis_swixcs.png'
+)
+Place.create(
+  name: 'Haunted House',
+  typ: 'Building',
+  photo: 'https://res.cloudinary.com/dkaxxgoge/image/upload/v1670498917/Storydom/haunted-house_zshyr3.png'
 )

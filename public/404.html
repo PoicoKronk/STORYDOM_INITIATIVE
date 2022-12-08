@@ -1,104 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      .error400 {
+      background-image: url("404.png");
+      background-size: cover;
+      margin-bottom: 3%;
+      }
+      .error400 img {
+        width: 100vh;
+        height: 100%;
+      }
+    </style>
+  </head>
 
-  .home-error-btn {
-  margin-top: 1%;
-  margin-left: 16%;
-    background-color:#151a4acf;
-    border-radius: 30px;
-    width: 400px;
-    height: 130px;
-    display: flex;
-    text-decoration: none;
-    color: $old-page;
-    font-family: 'Henny Penny', cursive;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 89px;
-    margin-bottom: 10%;
-  }
-
-  .index {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/001/846/790/non_2x/blue-watercolor-night-sky-background-free-vector.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  }
-
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
-
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  .stickers-character{
-height: 126px;
-left: 80px;
-top: 42px;
-border-radius: 20px;
-display: flex;
-}
-  </style>
-</head>
-
-<body class="index">
-  <!-- This file lives in public/404.html -->
-  <div class="stickers-character">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <div>
-      <div class="home-error-btn">
-      <p>You may have mistyped the address or the page may have moved.</p>
-      </div>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
+  <body class="error400">
+  </body>
 </html>
