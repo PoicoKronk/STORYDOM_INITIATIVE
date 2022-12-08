@@ -45,39 +45,59 @@
   position: relative;
   bottom: 75px;
   left: 0;
-   }
+  }
 
 .creature-char-page2{
   scale: 50%;
   position: relative;
   bottom: 75px;
   left: 65vh;
-   }
+  -webkit-animation:linear infinite;
+  -webkit-animation-name: flying;
+  -webkit-animation-duration: 7s;
+  -webkit-animation-fill-mode: forwards;
 
-.creature-char-page3{
-  scale: 50%;
-  position: relative;
-  bottom: 75px;
-  left: 0;
-   }
+  }
 
-.creature-char-page4{
-  scale: 50%;
-  position: relative;
-  bottom: 75px;
-  left: 0;
-   }
 
-.creature-char-page5{
-  scale: 50%;
-  position: relative;
-  bottom: 75px;
-  left: 0;
-   }
+  .creature-char-page3{
+    scale: 50%;
+    position: relative;
+    bottom: 75px;
+    left: 0;
+  }
 
-.creature-char-page6{
-  scale: 50%;
-  position: relative;
-  bottom: 75px;
-  left: 0;
-   }
+  .creature-char-page4{
+    scale: 50%;
+    position: relative;
+    bottom: 75px;
+    left: 0;
+  }
+
+  .creature-char-page5{
+    scale: 50%;
+    position: relative;
+    bottom: 75px;
+    left: 0;
+  }
+
+  .creature-char-page6{
+    scale: 50%;
+    position: relative;
+    bottom: 75px;
+    left: 0;
+  }
+
+  @-webkit-keyframes flying{
+    0% {
+      right: 5vh;
+    }
+    50% {
+      right: -60vh;
+      scale: 33%;
+      bottom: 29%;
+    }
+    100% {
+      right: 5vh;
+    }
+  }
