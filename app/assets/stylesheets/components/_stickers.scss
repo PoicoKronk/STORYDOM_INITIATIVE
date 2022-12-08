@@ -54,6 +54,8 @@
 
 .img-item {
   height: 125px;
+  width: 125px;
+  object-fit: fill;
   border-radius: 20px;
   display: flex;
 }
