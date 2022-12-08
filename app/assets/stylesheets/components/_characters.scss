@@ -38,16 +38,30 @@
 .human-char-page5{
   scale: 50%;
   position: relative;
-  bottom: -50px;
-  left: 0;
+  left: 100vh;
+  bottom: -100px;
+  -webkit-animation: ease-in;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-name: iddle;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
   }
 
 .human-char-page6{
   scale: 50%;
   position: relative;
-  bottom: -50px;
-  left: 0;
+  left: 100vh;
+  bottom: -100px;
+  -webkit-animation: ease-in;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-name: run-out;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
   }
+
+
+
 
 .creature-char-page1{
   scale: 50%;
@@ -90,8 +104,14 @@
   .creature-char-page5{
     scale: 50%;
     position: relative;
-    bottom: 75px;
-    left: 0;
+    bottom: -145px;
+    left: 10vh;
+    -webkit-animation: ease-in;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-name: lying;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
   }
 
   .creature-char-page6{
@@ -101,27 +121,37 @@
     left: 0;
   }
 
-  @-webkit-keyframes flying{
-    0% {
-      right: 5vh;
-    }
-    50% {
-      right: -60vh;
-      scale: 33%;
-      bottom: 29%;
-    }
-    100% {
-      right: 5vh;
-    }
+@-webkit-keyframes flying{
+  0% {
+    right: 5vh;
   }
+  50% {
+    right: -60vh;
+    scale: 33%;
+    bottom: 29%;
+  }
+  100% {
+    right: 5vh;
+  }
+}
 
-.creature-char-page6{
-  scale: 50%;
-  position: relative;
-  bottom: 75px;
-  left: 0;
-   }
+@-webkit-keyframes lying{
+  0% {
+    transform: translateX(0);
+  }
+  100%{
+    transform: rotate(-90deg);
+  }
+}
 
+// @-webkit-keyframes falling{
+//   0% {
+//     transform: rotate(-90deg);
+//   }
+//   100%{
+//     transform: translateY(100%);
+//   }
+// }
 
 @-webkit-keyframes run {
   0% {
@@ -132,6 +162,14 @@
     }
 }
 
+@-webkit-keyframes run-out {
+  0% {
+    transform: translateX(0%);
+    }
+  100% {
+      transform: translateX(250%);
+    }
+}
 
 @-webkit-keyframes iddle {
   0% {
@@ -141,7 +179,6 @@
       transform: translateY(2%);
     }
 }
-
 
 @-webkit-keyframes hover {
   0% {
